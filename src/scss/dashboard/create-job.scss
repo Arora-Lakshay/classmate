@@ -1,0 +1,355 @@
+@import '../variables.scss';
+
+.create-job {
+  width: 100%;
+  height: 100%;
+  background: $input-bg;
+  padding: 0px 50px 0px 50px;
+  $header-ht: 70px;
+  overflow: hidden;
+
+  header {
+    height: $header-ht;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin: auto 50px;
+    border-bottom: 1px solid $primary-border;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      background: transparent;
+      justify-content: center;
+
+      .button#logo {
+        font-family: $primary-font;
+        color: $primary-color;
+        font-weight: 800;
+        font-size: 1.85em;
+        background: transparent;
+        border: none;
+        padding: 0;
+        height: 100%;
+
+        span.mark {
+          display: inline-block;
+          width: 9px;
+          height: 9px;
+          background: #f64f3c;
+          margin-left: -5px;
+          border-radius: 50%;
+        }
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        &:focus, &:active {
+          outline: 0;
+        }
+      }
+    }
+  }
+
+  main {
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background: transparent;
+
+    .navigation {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      padding-left: 24px;
+      padding-top: 12px;
+      align-items: center;
+      flex-direction: column;
+      justify-content: flex-start;
+      border-right: 1px solid $primary-border;
+      overflow: hidden;
+
+      .goback {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 14px;
+        
+        button#goto-prev-page {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-top: 0px;
+          height: 45px;
+          color: $font-color;
+          border: none;
+          background: transparent;
+          cursor: pointer;
+          transition: all 200ms ease;
+
+          .icon {
+            height: 30px;
+            width: 30px;
+            margin-right: 8px;
+            padding-left: 8px;
+
+            svg {
+              width: 24px;
+              height: 20px;
+            }
+          }
+
+          .text {
+            flex: 1;
+            font-size: 1em;
+            font-weight: 600;
+            margin-top: -6px;
+          }
+  
+          &:hover {
+            color: $primary-color;
+
+            .icon {
+              padding-left: 0px;
+            }
+
+          }
+  
+          &:focus, &:active {
+            outline: 0;
+          }
+        }
+      }
+
+      .progress-container {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        padding: 20px 0px 0px 30px;
+        align-items: center;
+        background: transparent;
+        justify-content: flex-end;
+
+        nav.nav-menu {
+          width: 100%;
+          height: 100%;
+
+          ul {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            padding-left: 12px;
+            position: relative;
+            
+            li.nav-item {
+              width: 100%;
+              z-index: 1;
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              margin-bottom: 25px;
+              position: relative;
+
+              .nav-link {
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                padding-left: 1.25em;
+                background: transparent;
+                border: none;
+                justify-content: flex-start;
+
+                .text {
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  justify-content: space-between;
+                  margin: 0;
+                  padding: 0;
+                  padding-top: 18px;
+                  margin-left: 40px;
+
+                  .title {
+                    font-size: 0.975em;
+                    font-weight: 600;
+                    color: $primary-color;
+                    font-family: $primary-font;
+                    margin-bottom: 5px;
+                  }
+
+                  .status {
+                    visibility: hidden;
+                    font-size: 0.8em;
+                    font-weight: 600;
+                    color: #40B995;
+                    opacity: 1;
+                  }
+
+                }
+
+                .icon {
+                  display: block;
+                  width: 40px;
+                  height: 40px;
+                  margin: auto 0px;
+                  padding: 0.44rem;
+                  border-radius: 50px;
+                  background: $input-bg;
+                  border: 2px solid $primary-color;
+
+                  svg {
+                    height: auto;
+                    width: 100%;
+                    fill: $primary-color;
+                  }
+
+                }
+
+                &.active {
+                  cursor: pointer;
+                  .text {
+                    .title {
+                      color: $primary-bg;
+                    }
+                  }
+
+                  .icon {
+                    background: $primary-bg;
+                    border-color: $primary-bg;
+
+                    svg {
+                      fill: $input-bg;
+                    }
+                  }
+                }
+
+                &.completed {
+                  .text {
+                    .status {
+                      visibility: visible;
+                    }
+                  }
+
+                  .icon {
+                    background: #DFF6EE;
+                    border-color: #DFF6EE;
+
+                    svg {
+                      fill: #40B995;
+                    }
+                  }
+                }
+
+                &:focus, &:active {
+                  outline: 0;
+                }
+              }    
+            }
+            
+            &::after {
+              content: '';
+              position: absolute;
+              display: block;
+              width: 2px;
+              height: 84%;
+              background: rgba(187, 191, 197, 0.35);
+              top: 50%;
+              transform: translateY(-50%);
+              left: 51px;
+              z-index: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .form-area {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      padding: 0px;
+      padding-top: 50px;
+      position: relative;
+      display: grid;
+      grid-template-rows: 86% 14%;
+
+      .form-container {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background: $input-bg;
+        position: relative;
+        padding: 0px 50px;
+      }
+
+      .back-forth-container {
+        height: 100%;
+        width: 100%;
+        z-index: 999;
+        display: flex;
+        padding: 14px 68px;
+        align-items: center;
+        background: transparent;
+        justify-content: space-between;
+        box-shadow: 0px 0px 8px 1px #e1e1e1;
+
+        .button.navigator {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.95em;
+          font-family: $primary-font;
+          font-weight: 600;
+          color: $primary-color;
+          background-color: $input-bg;
+          border: 2px solid $primary-color;
+          border-radius: 50px;
+          transition: all 200ms ease;
+          cursor: pointer;
+          width: 150px;
+          padding: 0;
+          height: 100%;
+
+          &:last-of-type {
+            $bg: #25CC88;
+            width: 175px;
+            background: $bg;
+            color: $input-bg;
+            border-color: $bg;
+          }
+
+          &:last-of-type:hover {
+            background-color: #1da770;
+            border-color: #1da770;
+          }
+
+          &:hover {
+            background: $primary-color;
+            color: $input-bg;
+          }
+
+          &.disable, &:disabled, &.disable:disabled {
+            cursor: default;
+            opacity: 0.5;
+            border-color: gray;
+            color: gray;
+            background: $input-bg;
+          }
+
+          &:focus, &:active {
+            outline: 0;
+          }
+        }
+      }
+    }
+  }
+}

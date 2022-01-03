@@ -1,0 +1,100 @@
+.draft-content-wrapper {
+  width: 100%;
+  margin-top: 16px;
+  margin-left: 6px;
+  overflow: hidden;
+}
+.draft-content-wrapper h2.draft-header {
+  color: #0d2551;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 1.65em;
+}
+.draft-content-wrapper section.drafts-listing {
+  padding: 30px 0;
+  background: #FAFCFF;
+}
+.draft-content-wrapper section.drafts-listing .drafts-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.draft-content-wrapper section.drafts-listing .drafts-container .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.draft-content-wrapper section.drafts-listing .drafts-container .row .col-md-10 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.draft-content-wrapper section.drafts-listing .drafts-container .row .col-md-10 a {
+  color: #31383d;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.draft-content-wrapper section.drafts-listing .drafts-container .row .col-md-10 a:hover,
+.draft-content-wrapper section.drafts-listing .drafts-container .row .col-md-10 a:focus {
+  color: #73a5fc;
+}
+.draft-content-wrapper section.drafts-listing .drafts-container .row .col-md-10 ul.job-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.draft-content-wrapper section.drafts-listing .drafts-container .row .col-md-10 ul.job-list > li.job-preview {
+  background: #FAFCFF;
+  border: 1px solid #d7e2e9;
+  border-radius: 0.4rem;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 6px solid #FFC37A;
+}
+.draft-content-wrapper section.drafts-listing .drafts-container .row .col-md-10 ul.job-list > li.job-preview:hover {
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+.draft-content-wrapper section.drafts-listing .drafts-container .row .col-md-10 .company {
+  color: #96a4b1;
+}
+.draft-content-wrapper section.drafts-listing .drafts-container .row .col-md-10 h4 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+  font-size: 1.25em;
+  font-weight: 700;
+}
+.draft-content-wrapper section.drafts-listing .drafts-container .row .col-md-10 h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-weight: 500;
+}
+.draft-content-wrapper section.drafts-listing .drafts-container .row .col-md-10 .btn-apply {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: #393a5f;
+  border: 2px solid #393a5f;
+  padding: 0.6rem 2rem;
+  border-radius: 2rem;
+}
+.draft-content-wrapper section.drafts-listing .drafts-container .row .col-md-10 .btn-apply:hover {
+  background-color: #393a5f;
+  color: #FAFCFF;
+  border: 2px solid #393a5f;
+}

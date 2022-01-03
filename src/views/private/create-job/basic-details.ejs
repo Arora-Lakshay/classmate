@@ -1,0 +1,177 @@
+<div class="form-container">
+
+  <div class="step-count">
+    <span class="count">Step 1/6</span>
+    <span class="draft-status"></span>
+  </div>
+  <div class="step-header">
+    <h2 class="title">1. Tell us more about the company</h2>
+  </div>
+
+  <form id="basic-details-form">
+    <fieldset>
+      <legend>
+        Opportunity Title
+        <span style="color: orangered;">*</span>
+      </legend>
+      <div class="tooltip">
+        <span>
+          <code>i</code>
+          <p>You can enter the hiring role or any relevant title</p>
+        </span>
+      </div>
+      <div class="avalid input">
+        <input tabindex="1" id="opportunity-title" name="jobTitle" required type="text" minlength="3" maxlength="200"
+          autocomplete="off" />
+      </div>
+    </fieldset>
+
+    <div class="half-container">
+      <fieldset>
+        <legend>
+          Organisation
+          <span style="color: orangered;">*</span>
+        </legend>
+        <div class="tooltip">
+          <span>
+            <code>i</code>
+            <p>Enter the name of hiring organisation</p>
+          </span>
+        </div>
+        <div class="avalid input">
+          <input tabindex="2" id="organisation-name" name="organisation" required type="text" minlength="3"
+            maxlength="100" autocomplete="off" />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          Website
+          <span style="color: orangered;">*</span>
+        </legend>
+        <div class="tooltip">
+          <span>
+            <code>i</code>
+            <p>Enter website of hiring organisation</p>
+          </span>
+        </div>
+        <div class="avalid input">
+          <input tabindex="3" id="organisation-website" name="website" required type="url" autocomplete="off" />
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="half-container">
+      <fieldset>
+        <legend>
+          Opportunity Start Date & Time
+          <span style="color: orangered;">*</span>
+        </legend>
+        <div class="tooltip">
+          <span>
+            <code>i</code>
+            <p>Select the event starting date and time</p>
+          </span>
+        </div>
+        <div class="avalid input">
+          <input id="opportunity-start-time" type="datetime-local" name="startDateTime"
+            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required autocomplete="off">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          Opportunity End Date & Time
+          <span style="color: orangered;">*</span>
+        </legend>
+        <div class="tooltip">
+          <span>
+            <code>i</code>
+            <p>Select the event ending date and time</p>
+          </span>
+        </div>
+        <div class="avalid input">
+          <input id="opportunity-end-time" type="datetime-local" name="endDateTime"
+            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required autocomplete="off">
+        </div>
+      </fieldset>
+    </div>
+
+    <fieldset>
+      <legend>
+        Job Domains
+        <span style="color: orangered;">*</span>
+      </legend>
+      <div id="job-domains" class="input chipped">
+        <div class="category-chip">
+          <input type="checkbox" id="domain-arts-science" value="Arts & Science">
+          <label for="domain-arts-science">Arts & Science</label>
+        </div>
+        <div class="category-chip">
+          <input type="checkbox" id="domain-business" value="Business">
+          <label for="domain-business">Business</label>
+        </div>
+        <div class="category-chip">
+          <input type="checkbox" id="domain-engineering" value="Engineering">
+          <label for="domain-engineering">Engineering</label>
+        </div>
+        <div class="category-chip">
+          <input type="checkbox" id="domain-others" value="Others">
+          <label for="domain-others">Others</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        Job Categories
+        <span style="color: orangered;">*</span>
+      </legend>
+      <div id="job-categories" class="input chipped">
+        <% const catg=[{label: "Technical Writing" , id: "category-technical-writing" }, {label: "Product Management" ,
+          id: "category-product-management" }, {label: "Data Science" , id: "category-data-science" },
+          {label: "Human Resource" , id: "category-human-resource" }, {label: "Business Analyst" ,
+          id: "category-business-analyst" }, {label: "Marketing" , id: "category-marketing" }, {label: "Cybersecurity" ,
+          id: "category-cybersecurity" }, {label: "Electronics" , id: "category-electronics" }, {label: "Robotics" ,
+          id: "category-robotics" }, {label: "Consultancy" , id: "category-consultancy" }, {label: "Finance" ,
+          id: "category-finance" }, {label: "Mobile App Development" , id: "category-app-development" },
+          {label: "Programming" , id: "category-programming" }, {label: "Software Development" , id: "category-sde" },
+          {label: "Web Development" , id: "category-web-development" }, {label: "Trainee" , id: "category-trainee" },
+          {label: "Designer" , id: "category-designer" }, {label: "Others" , id: "category-others" }]; %>
+          <% catg.forEach((item, i)=> { %>
+            <div class="category-chip">
+              <input type="checkbox" value="<%= item.label %>" id="<%= item.id %>">
+              <label for="<%= item.id %>">
+                <%= item.label %>
+              </label>
+            </div>
+            <% }); %>
+      </div>
+    </fieldset>
+  </form>
+
+</div>
+<div class="back-forth-container">
+  <button id="next-section-button" type="submit" form="basic-details-form" class="button navigator">Save &
+    Continue</button>
+</div>
+
+<% if (options.containsDraftData && options.draftData) { %>
+  <% const dinp=options.draftData.inputs %>
+    <% const dch=options.draftData.chips %>
+      <% Object.keys(dinp).forEach(name=> { %>
+        <% const id=dinp[name].inputId %>
+          <% const value=dinp[name].value %>
+            <script>
+              document.querySelector(`.create-job main .form-area .form-container form fieldset .avalid.input input#<%= id %>`).value = "<%= value %>";
+            </script>
+            <% }); %>
+              <% Object.keys(dch).forEach(ch=> { %>
+                <% const values=dch[ch].value; %>
+                  <% values.forEach(value=> { %>
+                    <script>
+                      document.querySelector(`.create-job main .form-area .form-container form fieldset .chipped.input input[value="<%= value %>"]`).checked = true;
+                    </script>
+                    <% }); %>
+                      <% }); %>
+                        <% } %>

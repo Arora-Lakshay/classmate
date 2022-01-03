@@ -1,0 +1,43 @@
+<div class="form-container">
+
+  <div class="step-count">
+    <span class="count">Step 6/6</span>
+    <span class="draft-status"></span>
+  </div>
+  <div class="step-header">
+    <h2 class="title">6. Anything else you want to add ?</h2>
+  </div>
+
+  <form id="additional-details-form">
+
+    <div class="imp-contact">
+      <p>1. Got any Important Contact to have ?</p>
+      <div class="half-container">
+        <fieldset>
+          <legend>
+            Name
+          </legend>
+          <div class="avalid input">
+            <input id="additional-imp-contact-name" type="text" name="importantName" minlength="3" maxlength="100"
+              autocomplete="off">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            Contact
+          </legend>
+          <div class="avalid input">
+            <input id="additional-imp-contact-phone" type="number" name="importantPhone"
+              pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" autocomplete="off">
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </form>
+
+</div>
+<div class="back-forth-container">
+  <button id="next-section-button" type="submit" form="additional-details-form" class="button navigator">Publish
+    Opportunity</button>
+</div>

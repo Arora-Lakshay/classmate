@@ -1,0 +1,147 @@
+@import "../variables.scss";
+
+.page.dashboard main .main-wrapper {
+
+  .utils {
+    width: 100%;
+    height: 54px;
+    display: flex;
+    align-items: flex-start;
+    background: transparent;
+    justify-content: flex-end;
+    margin-top: 10px;
+
+    .secondary {
+      display: flex;
+      width: 24%;
+      height: 100%; 
+      align-items: flex-start;
+      justify-content: flex-end;
+
+      .utility {
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        border: none;
+        
+        &.notifications {
+          width: 80px;
+          height: 58%;
+          margin: auto 0px;
+  
+          button#notify {
+            position: relative;
+            width: 60%;
+            height: 100%;
+            border: none;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            cursor: pointer;
+            background: transparent;
+  
+            svg {
+              width: auto;
+              height: 95%;
+              transition: all 100ms ease;
+            }
+  
+            span.counter {
+              position: absolute;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              min-width: 14px;
+              height: 14px;
+              background: $mark;
+              border-radius: 50px;
+              top: 1px;
+              right: 10px;
+              opacity: 0;
+            }
+  
+            &:hover {
+              opacity: 0.7;
+            }
+    
+            &:focus, &:active {
+              outline: 0;
+            }
+          }
+        }
+  
+        &.new-post
+        {
+          margin-left: 16px;
+          min-width: 152px;
+          height: 100%;
+          position: relative;
+  
+          button#post-new-job {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+            padding-left: 0.95em;
+            padding-right: 1.25em;
+            border: 1px solid lightgray;
+            border-radius: 16px;
+            cursor: pointer;
+            background: transparent;
+            font-weight: 600;
+            font-size: 0.96em;
+            color: #3c4043;
+            transition: all 100ms ease;
+            overflow: hidden;
+            box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+            transition: box-shadow .08s linear;
+
+            &::before {
+              background-image: url("/assets/img/create.png");
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: 26px;
+              content: '';
+              display: block;
+              height: 32px;
+              min-width: 32px;
+            }
+  
+            &:hover {
+              box-shadow: 0 1px 3px 0 rgb(60 64 67 / 30%), 0 4px 8px 3px rgb(60 64 67 / 15%);
+              background-color: #fafafb;
+            }
+    
+            &:focus, &:active {
+              outline: 0;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .content-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    user-select: none;
+
+    img#bgstu {
+      opacity: 0.875;
+    }
+    
+    img#bgcord {
+      opacity: 0.65;
+    }
+  }
+
+}

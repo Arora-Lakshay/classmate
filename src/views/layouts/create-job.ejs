@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1024">
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" href="/css/normalize.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/dashboard/create-job.css" />
+  <link rel="stylesheet" href="/css/dashboard/create-job/<%= options.active %>.css" />
+  <link rel="stylesheet" href="/css/notify.css" />
+  <script>
+    const activeNavLink = "<%= options.active %>";
+    const stepsCompleted = "<%= options.stepsDone %>";
+    const statusDone = "<%= options.statusDone %>";
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="page create-job">
+      <header>
+        <div class="logo">
+          <button class="button" id="logo">classmate <span class="mark"></span></button>
+        </div>
+      </header>
+      <main>
+        <div class="navigation">
+          <div class="goback">
+            <button id="goto-prev-page">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                  <title>Back</title>
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="42" d="M244 400L100 256l144-144M120 256h292" />
+                </svg>
+              </span>
+              <span class="text">Back to Dashboard</span>
+            </button>
+          </div>
+
+          <div class="progress-container">
+            <nav class="nav-menu">
+              <ul>
+                <li class="nav-item">
+                  <div id="basic-details" class="nav-link">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                        <title>Basic Details</title>
+                        <path
+                          d="M332.64 64.58C313.18 43.57 286 32 256 32c-30.16 0-57.43 11.5-76.8 32.38-19.58 21.11-29.12 49.8-26.88 80.78C156.76 206.28 203.27 256 256 256s99.16-49.71 103.67-110.82c2.27-30.7-7.33-59.33-27.03-80.6zM432 480H80a31 31 0 01-24.2-11.13c-6.5-7.77-9.12-18.38-7.18-29.11C57.06 392.94 83.4 353.61 124.8 326c36.78-24.51 83.37-38 131.2-38s94.42 13.5 131.2 38c41.4 27.6 67.74 66.93 76.18 113.75 1.94 10.73-.68 21.34-7.18 29.11A31 31 0 01432 480z" />
+                      </svg>
+                    </span>
+                    <p class="text">
+                      <span class="title">Basic Details</span>
+                      <span class="status">completed</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div id="eligibility" class="nav-link">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                        <title>Eligibility</title>
+                        <path
+                          d="M269 335.61q-6.33.47-12.78.47c-5.23 0-10.4-.24-15.51-.69a176.11 176.11 0 01-127.67-72.94 4 4 0 00-6.77.35l-72 129.4c-2.74 5-3.17 11-.28 15.88A16.78 16.78 0 0048.22 416h78a15.28 15.28 0 0113.62 7.33L178.5 488a16.26 16.26 0 0013.75 8c5.94-.33 12.09-4.19 14.56-9.6l66.11-145.15a4 4 0 00-3.92-5.64zM477.64 391.88l-71.53-129.17a4 4 0 00-6.74-.36 176.5 176.5 0 01-78.31 61.42 16.09 16.09 0 00-8.72 8.25l-36.86 81.1a7.92 7.92 0 000 6.6l30.27 66.59c2.45 5.41 8.59 9.36 14.52 9.69a16.3 16.3 0 0013.7-8.12l38.53-64.58c2.89-4.85 8.13-7.33 13.78-7.3h78.77c6.67 0 11.72-3.48 14-10a16.92 16.92 0 00-1.41-14.12z" />
+                        <ellipse cx="256.26" cy="160" rx="48.01" ry="48" />
+                        <path
+                          d="M256.26 16c-79.42 0-144 64.59-144 144s64.61 144 144 144 144-64.6 144-144-64.59-144-144-144zm0 224a80 80 0 1180-80 80.1 80.1 0 01-80 80z" />
+                      </svg>
+                    </span>
+                    <p class="text">
+                      <span class="title">Eligibility</span>
+                      <span class="status">completed</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div id="rounds" class="nav-link">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                        <title>Rounds</title>
+                        <path
+                          d="M272 320.46V202.3l166.62-75.73a16 16 0 000-29.14l-176-80A16 16 0 00240 32v288.46q8-.45 16-.46t16 .46z" />
+                        <path
+                          d="M463.33 457.5c-8.56-42.85-35.11-78.74-76.78-103.8-32.5-19.55-72.67-31.3-114.55-33.7v79.75a16 16 0 11-32 0V320c-41.88 2.4-82.05 14.15-114.55 33.7-41.67 25.06-68.22 60.95-76.78 103.8a32.49 32.49 0 006.44 27.08C61.13 492 70 496 80 496h352c10 0 18.88-4.05 24.9-11.42a32.49 32.49 0 006.43-27.08z" />
+                      </svg>
+                    </span>
+                    <p class="text">
+                      <span class="title">Rounds</span>
+                      <span class="status">completed</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div id="job-description" class="nav-link">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                        <title>Job Description</title>
+                        <path
+                          d="M352 128H160a32 32 0 00-32 32v192a32 32 0 0032 32h192a32 32 0 0032-32V160a32 32 0 00-32-32zm0 216a8 8 0 01-8 8H168a8 8 0 01-8-8V168a8 8 0 018-8h176a8 8 0 018 8z"
+                          fill="none" />
+                        <rect x="160" y="160" width="192" height="192" rx="8" ry="8" />
+                        <path
+                          d="M464 192a16 16 0 000-32h-16v-32a64.07 64.07 0 00-64-64h-32V48a16 16 0 00-32 0v16h-48V48a16 16 0 00-32 0v16h-48V48a16 16 0 00-32 0v16h-32a64.07 64.07 0 00-64 64v32H48a16 16 0 000 32h16v48H48a16 16 0 000 32h16v48H48a16 16 0 000 32h16v32a64.07 64.07 0 0064 64h32v16a16 16 0 0032 0v-16h48v16a16 16 0 0032 0v-16h48v16a16 16 0 0032 0v-16h32a64.07 64.07 0 0064-64v-32h16a16 16 0 000-32h-16v-48h16a16 16 0 000-32h-16v-48zm-80 160a32 32 0 01-32 32H160a32 32 0 01-32-32V160a32 32 0 0132-32h192a32 32 0 0132 32z" />
+                      </svg>
+                    </span>
+                    <p class="text">
+                      <span class="title">Job Description</span>
+                      <span class="status">completed</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div id="stipend-salary" class="nav-link">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                        <title>Stipend & Salary</title>
+                        <path
+                          d="M32 376a56 56 0 0056 56h336a56 56 0 0056-56V222H32zm66-76a30 30 0 0130-30h48a30 30 0 0130 30v20a30 30 0 01-30 30h-48a30 30 0 01-30-30zM424 80H88a56 56 0 00-56 56v26h448v-26a56 56 0 00-56-56z" />
+                      </svg>
+                    </span>
+                    <p class="text">
+                      <span class="title">Stipend & Salary</span>
+                      <span class="status">completed</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div id="additional-details" class="nav-link">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                        <title>Additional Details</title>
+                        <path
+                          d="M503.58 126.2a16.85 16.85 0 00-27.07-4.55l-51.15 51.15a11.15 11.15 0 01-15.66 0l-22.48-22.48a11.17 11.17 0 010-15.67l50.88-50.89a16.85 16.85 0 00-5.27-27.4c-39.71-17-89.08-7.45-120 23.29-26.81 26.61-34.83 68-22 113.7a11 11 0 01-3.16 11.1L114.77 365.1a56.76 56.76 0 1080.14 80.18L357 272.08a11 11 0 0110.9-3.17c45 12 86 4 112.43-22 15.2-15 25.81-36.17 29.89-59.71 3.83-22.2 1.41-44.44-6.64-61z" />
+                        <path
+                          d="M437.33 378.41c-13.94-11.59-43.72-38.4-74.07-66.22l-66.07 70.61c28.24 30 53.8 57.85 65 70.88l.07.08A30 30 0 00383.72 464h1.1a30.11 30.11 0 0021-8.62l.07-.07 33.43-33.37a29.46 29.46 0 00-2-43.53zM118.54 214.55a20.48 20.48 0 00-3-10.76 2.76 2.76 0 012.62-4.22h.06c.84.09 5.33.74 11.7 4.61 4.73 2.87 18.23 12.08 41.73 35.54a34.23 34.23 0 007.22 22.12l66.23-61.55a33.73 33.73 0 00-21.6-9.2 2.65 2.65 0 01-.21-.26l-.65-.69-24.54-33.84a28.45 28.45 0 01-4-26.11 35.23 35.23 0 0111.78-16.35c5.69-4.41 18.53-9.72 29.44-10.62a52.92 52.92 0 0115.19.94 65.57 65.57 0 017.06 2.13 15.46 15.46 0 002.15.63 16 16 0 0016.38-25.06c-.26-.35-1.32-1.79-2.89-3.73a91.85 91.85 0 00-9.6-10.36c-8.15-7.36-29.27-19.77-57-19.77a123.13 123.13 0 00-46.3 9c-38.37 15.45-63.47 36.58-75.01 47.79l-.09.09A222.14 222.14 0 0063.7 129.5a27 27 0 00-4.7 11.77 7.33 7.33 0 01-7.71 6.17H50.2a20.65 20.65 0 00-14.59 5.9L6.16 182.05l-.32.32a20.89 20.89 0 00-.24 28.72c.19.2.37.39.57.58L53.67 258a21 21 0 0014.65 6 20.65 20.65 0 0014.59-5.9l29.46-28.79a20.51 20.51 0 006.17-14.76z" />
+                      </svg>
+                    </span>
+                    <p class="text">
+                      <span class="title">Additional Details</span>
+                      <span class="status">completed</span>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="form-area">
+          <%- body %>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="/js/index.js"></script>
+  <script src="/js/dashboard/create-job.js"></script>
+  <script src="/js/dashboard/create-job/<%= options.active %>.js"></script>
+</body>
+
+</html>

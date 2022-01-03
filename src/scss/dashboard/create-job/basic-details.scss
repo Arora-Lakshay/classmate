@@ -1,0 +1,269 @@
+@import '../../variables.scss';
+
+.create-job main .form-area {
+  
+  .form-container {
+    position: relative;
+
+    .step-count {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      
+      span.count {
+        font-size: 0.875em;
+        color: $primary-color;
+        font-weight: 600;
+      }
+      
+      span.draft-status {
+        font-size: 0.775em;
+        font-style: italic;
+        font-weight: 700;
+        border-radius: 50px;
+        padding: 4px 14px;
+        opacity: 0.8;
+        visibility: hidden;
+
+        &.saving {
+          visibility: visible;
+          color: rgb(255, 102, 0);
+          border: 1px solid rgb(255, 102, 0);
+          background: rgb(255, 236, 130);
+        }
+
+        &.saved {
+          visibility: visible;
+          color: rgb(0, 85, 0);
+          border: 1px solid rgb(0, 85, 0);
+          background: rgba(85, 255, 85, 0.75);
+        }
+      }
+    }
+
+    .step-header {
+      width: 100%;
+      margin-bottom: 50px;
+
+      .title {
+        font-size: 1.65em;
+        font-weight: 700;
+        color: $primary-color;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    form  {
+      margin-bottom: 35px;
+
+      .half-container {
+        margin: 0;
+        display: grid;
+        width: 100%;
+        grid-template-columns: 47% 47%;
+        column-gap: 6%;
+      }
+
+      fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 52px;
+        position: relative;
+
+        legend {
+          margin-bottom: 0.8em;
+          color: $primary-color;
+          font-size: 0.85em;
+          font-weight: 600;
+          margin-left: 1.15em;
+          opacity: 0.9;
+        }
+
+        .tooltip {
+          z-index: 99;
+
+          span {
+            display: inline-flex;
+            width: 16px;
+            height: 16px;
+            padding: 0.1em;
+            padding-top: 0.2em;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 12px;
+            top: -24px;
+            font-size: 0.7em;
+            font-weight: 600;
+            color: $font-color;
+            border: 1px solid $font-color;
+            border-radius: 50px;
+            transition: all 200ms ease;
+            
+            &:hover p {
+              display: block;
+              opacity: 1;
+            }
+          }
+
+          p {
+            position: absolute;
+            top: 12px;
+            right: 0;
+            color: $input-bg;
+            background: #323e53;
+            max-width: 225px;
+            min-width: 200px;
+            font-size: 0.825em;
+            font-weight: 500;
+            padding: 1em;
+            line-height: 1.5em;
+            border: none;
+            border-radius: 6px;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.15s ease-in-out;
+          }
+        }
+
+        .input {
+          width: 100%;
+          background: $input-bg;
+          border: 1px solid $primary-border;
+          border-radius: 12px;
+          padding-right: 0.5em;
+          display: flex;
+          align-items: center;
+          flex-wrap: nowrap;
+          transition: all 100ms ease;
+
+          &.correct {
+            border-color: #40B995;
+          }
+
+          &.incorrect {
+            border-color: $mark;
+          }
+
+          &:focus, &:active, &:focus-visible, &:focus-within {
+            border: 1px solid $primary-bg;
+            background: #f2f6ff;
+          }
+          
+          input {
+            flex: 1;
+            outline: 0;
+            height: 100%;
+            border: none;
+            padding: 1.15em;
+            color: $font-color;
+            font-weight: 500;
+            font-size: 0.825em;
+            background: transparent;
+            border-radius: 12px;
+            caret-color: $primary-bg;
+            &:focus {
+              outline: 0;
+            }
+          }
+
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          /* Firefox */
+          input[type=number] {
+            -moz-appearance: textfield;
+          }
+        }
+
+        .chipped.input {
+          width: 100%;
+          background: $input-bg;
+          border: none;
+          display: flex;
+          align-items: center;
+          padding: 0px;
+          z-index: 10;
+          flex-wrap: wrap;
+
+          .category-chip {
+            display: block;
+            margin: 6px 10px;
+            padding: 0;
+            height: 40px;
+            cursor: pointer;
+            border-radius: 8px;
+            background: $input-bg;
+            transition: all 200ms ease;
+            z-index: 10;
+
+          }
+          
+          .category-chip input {
+            display: none;
+          }
+          
+          .category-chip label {
+            position: relative;
+            font-size: 0.8em;
+            font-weight: 600;
+            color: $font-color;
+            height: 100%;
+            background: $input-bg;
+            border: none;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            cursor: pointer;
+            padding: 0px 16px;
+            border: 1px solid #d1d1d1;
+            transition: all 200ms ease;
+            z-index: 10;
+
+          }
+          
+          .category-chip label:before {
+            content: '';
+            -webkit-appearance: none;
+            background-color: $input-bg;
+            border-radius: 50px;
+            padding: 8px;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            cursor: pointer;
+            margin-right:8px;
+            cursor: pointer;
+            border: 1px solid #d1d1d1;
+            transition: all 200ms ease;
+            z-index: 10;
+          }
+          
+          .category-chip input:checked + label {
+            background: #40B995;
+            color: $input-bg;
+            border-color: #1da770;
+          }
+          
+          .category-chip input:checked + label:before {
+            background: lightgreen;
+            border-color: #1da770;
+          }
+        }
+      }
+    }
+  }
+
+  .back-forth-container {
+    justify-content: flex-end;
+  }
+  
+}

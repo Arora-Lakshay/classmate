@@ -1,0 +1,80 @@
+.error {
+  overflow: hidden;
+  background-image: url("/assets/img/Error.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 50px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.error .section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.error .section .status {
+  flex: 1;
+}
+.error .section .status h1 {
+  color: #0d2551;
+  font-size: 5em;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+}
+.error .section .content {
+  flex: 0.35;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.error .section .content h3 {
+  color: #0d2551;
+  font-size: 1.75em;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.error .section .content p {
+  color: #0d2551;
+  font-size: 1.15em;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.error .section .content a#goback {
+  display: block;
+  background: #39ac31;
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 0.67em;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 0px 15px 2px rgba(57, 172, 49, 0.35);
+  outline: 0;
+  text-decoration: none;
+  margin: 0;
+  transition: all 100ms ease;
+}
+.error .section .content a#goback:hover {
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+.error .section .content a#goback:focus, .error .section .content a#goback:active {
+  box-shadow: 0px 0px 0px 4px rgba(57, 172, 49, 0.75);
+}

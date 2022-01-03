@@ -1,0 +1,294 @@
+@import '../variables.scss';
+
+.page.jobs main .main-wrapper {
+  
+  .main-content-wrapper {
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 6px;
+    overflow: hidden;
+
+    h2.jobs-header {
+      color: $primary-color;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 50px;
+      font-size: 1.65em;
+    }
+
+    .search-wrapper {
+      margin-bottom: 35px;
+
+      .search-jobs {
+        width: 65%;
+        height: 48px;
+        padding: 0;
+        $bg-search: $input-bg;
+        background: $bg-search;
+        border-radius: 50px;
+        display: flex;
+        margin-bottom: 18px;
+  
+        input#job-search {
+          flex: 1;
+          height: 100%;
+          padding: 6px 32px;
+          border: none;
+          outline: 0;
+          background: transparent;
+          border-radius: 50px 0px 0px 50px;
+          border: 1px solid $primary-border;
+          font-size: 0.875em;
+          font-weight: 500;
+          color: $font-color;
+          transition: all 100ms ease;
+  
+          &:active, &:focus-visible, &:focus-within, &:focus {
+            outline: 0;
+            border: 1px solid $jobs-bg;
+          }
+
+          &::placeholder {
+            color: #a1a1a1;
+          }
+        }
+  
+        button#job-search-btn {
+          background: $jobs-bg-fade;
+          min-width: 68px;
+          border: 1px solid rgba(82, 96, 255, 0.5);
+          outline: 0;
+          border-radius: 0px 50px 50px 0px;
+          border-left: none;
+          color: $bg-search;
+          padding: 0.8em;
+          cursor: pointer;
+          transition: all 100ms ease;
+
+          &:focus, &:active, &:focus-visible {
+            outline: 0;
+          }
+
+          &:hover {
+            background: rgb(82, 96, 255);
+            border-color: rgb(82, 96, 255);
+          }
+
+          svg {
+            fill: $bg-search;
+            width: auto;
+            height: 100%;
+          }
+
+        }
+      }
+
+      .filter-container {
+        display: flex;
+        height: 44px;
+        width: max-content;
+
+        .filter {
+          min-width: 150px;
+          height: 100%;
+          background: white;
+          border: 1px solid $primary-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0em 1em;
+          margin: 0px;
+          margin-right: 14px;
+          border-radius: 50px;
+          cursor: pointer;
+
+          p {
+            margin: 0;
+            padding: 0;
+            color: $primary-color;
+            font-size: 1em;
+            font-weight: 600;
+          }
+        
+          &.active {
+            background: rgba(82, 96, 255, 0.5);
+            border: 1px solid $jobs-bg;
+  
+            p {
+              color: $input-bg;
+              font-weight: 500;
+            }
+          }
+        }
+
+        .clear-filter {
+          width: 150px;
+          height: 100%;
+          background: $input-bg;
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0em 1em;
+          margin: 0px;
+          margin-right: 14px;
+          border-radius: 50px;
+
+          p {
+            margin: 0;
+            padding: 0;
+            color: $jobs-bg;
+            font-size: 0.95em;
+            font-weight: 600;
+            cursor: pointer;
+          }
+        }
+
+      }
+
+    }
+
+    .metadata {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 32px;
+
+      p.job-count {
+        font-size: 1em;
+        font-weight: 500;
+        color: $jobs-bg;
+
+        span.count {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .jobs-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      // max-height: 300px;
+      // overflow-y: auto;
+      // overflow-x: hidden;
+      padding: 0px 18px;
+
+      a {
+        all: unset;
+        display: block;
+      }
+
+      .job {
+        background: white;
+        border: 2px solid $primary-border;
+        border-radius: 12px;
+        width: 100%;
+        display: flex;
+        padding: 18px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        max-height: 150px;
+        cursor: pointer;
+
+        &.latest {
+          border: 2px solid $jobs-bg;
+          background: white;
+        }
+
+        .job-image {
+          background: #C2DBFF;
+          border: none;
+          border-radius: 12px;
+          width: 75px;
+          height: 75px;
+        }
+
+        .job-details {
+          display: flex;
+          height: 100%;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          margin-left: 42px;
+
+          .company-name {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: $primary-color;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 10px;
+          }
+
+          .job-profile {
+            color: $font-color;
+            font-size: 1em;
+            font-weight: 500;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 12px;
+          }
+
+          .specs {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+
+            .item {
+              display: flex;
+              font-size: 0.875em;
+              font-weight: 500;
+              color: $font-color;
+              margin-right: 25px;
+
+              svg {
+                margin-right: 10px;
+                height: 16px;
+                width: auto;
+              }
+
+              p {
+                margin: 0;
+                padding: 0;    
+              }
+            }
+          }
+
+          .extras {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+              font-size: 0.85em;
+              font-weight: 500;
+              color: $font-color;
+              margin: 0;
+              padding: 0;
+
+              &.applications {
+                color: $success-dark;
+                font-weight: 600;
+              }
+            }
+
+            .spacer {
+              display: block;
+              width: 6px;
+              height: 6px;
+              border: none;
+              border-radius: 50%;
+              margin: 0px 10px;
+              background: $font-color;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}

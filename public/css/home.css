@@ -1,0 +1,259 @@
+.home {
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 0 35px;
+  background: linear-gradient(270deg, #F6F1EC 0%, #FAFCFF 100%);
+}
+.home header {
+  width: 100%;
+  height: 62px;
+  display: flex;
+  padding: 0 35px;
+  padding-top: 22px;
+  align-items: center;
+  background: transparent;
+  justify-content: space-between;
+}
+.home header .logo {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.home header .logo .button#logo {
+  font-family: "Montserrat", sans-serif;
+  color: #0d2551;
+  font-weight: 800;
+  font-size: 2em;
+  background: transparent;
+  border: none;
+  padding: 0;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.home header .logo .button#logo span.mark {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: #f64f3c;
+  margin-left: -5px;
+  border-radius: 50%;
+}
+.home header .logo .button#logo:hover {
+  opacity: 0.7;
+}
+.home header .logo .button#logo:focus, .home header .logo .button#logo:active {
+  outline: 0;
+}
+.home header .options {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home header .options .item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25px;
+}
+.home header .options .item .button#signin {
+  color: #0d2551;
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 1em;
+  height: 100%;
+  font-weight: 600;
+}
+.home header .options .item .button#signin:hover {
+  opacity: 0.7;
+}
+.home header .options .item .button#signin:focus, .home header .options .item .button#signin:active {
+  outline: 0;
+  opacity: 0.7;
+}
+.home header .options .item .button#get-started {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FAFCFF;
+  border: none;
+  box-shadow: 0px 0px 0px 2px #0d2551;
+  border-radius: 50px;
+  background: #0d2551;
+  font-size: 1em;
+  width: 150px;
+  padding: 0.67em;
+  transition: all 200ms ease;
+}
+.home header .options .item .button#get-started:hover {
+  background: transparent;
+  color: #0d2551;
+  font-weight: 500;
+}
+.home header .options .item .button#get-started:focus, .home header .options .item .button#get-started:active {
+  outline: 0;
+  opacity: 0.7;
+  background: transparent;
+  color: #0d2551;
+}
+.home main {
+  padding: 0 35px;
+}
+.home main .section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 45px;
+  margin-top: 45px;
+}
+.home main .section .content {
+  flex: 1;
+}
+.home main .section .content.express {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.home main .section .content.pipes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home main .section .content.interactive {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.home main .section .content.heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  flex: none;
+}
+.home main .section .content.heading h2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  color: #0d2551;
+  font-size: 3.5em;
+  margin: 4px 0px;
+}
+.home main .section .content.heading h2.right {
+  justify-content: flex-end;
+}
+.home main .section .content.heading h2.justify {
+  justify-content: center;
+}
+.home main .section .content.heading h2.left {
+  justify-content: flex-start;
+}
+.home main .section .content.cta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.home main .section .content.cta .text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.home main .section .content.cta .text span.highlight {
+  font-weight: 600;
+}
+.home main .section .content.cta .text p {
+  font-size: 1.1em;
+  margin: 6px 0px;
+  color: #0d2551;
+  font-weight: 500;
+}
+.home main .section .content.cta .custom-btn {
+  margin-top: 30px;
+  height: 50px;
+  color: #FAFCFF;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.home main .section .content.cta .custom-btn#cta {
+  border: none;
+  background: #0a62ff;
+  background: linear-gradient(45deg, #0a62ff 0%, #7507f0 100%);
+  color: #FAFCFF;
+  overflow: hidden;
+}
+.home main .section .content.cta .custom-btn#cta:hover {
+  text-decoration: none;
+  color: #FAFCFF;
+}
+.home main .section .content.cta .custom-btn#cta:before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #FAFCFF;
+  -webkit-animation: shine 3s ease-in-out infinite;
+          animation: shine 3s ease-in-out infinite;
+}
+.home main .section .content.cta .custom-btn#cta:hover {
+  opacity: 0.7;
+}
+.home main .section .content.cta .custom-btn#cta:active {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+@-webkit-keyframes shine {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+@keyframes shine {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}

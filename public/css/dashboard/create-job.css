@@ -1,0 +1,299 @@
+.create-job {
+  width: 100%;
+  height: 100%;
+  background: #FAFCFF;
+  padding: 0px 50px 0px 50px;
+  overflow: hidden;
+}
+.create-job header {
+  height: 70px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  margin: auto 50px;
+  border-bottom: 1px solid #e1e6ef;
+}
+.create-job header .logo {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  justify-content: center;
+}
+.create-job header .logo .button#logo {
+  font-family: "Montserrat", sans-serif;
+  color: #0d2551;
+  font-weight: 800;
+  font-size: 1.85em;
+  background: transparent;
+  border: none;
+  padding: 0;
+  height: 100%;
+}
+.create-job header .logo .button#logo span.mark {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: #f64f3c;
+  margin-left: -5px;
+  border-radius: 50%;
+}
+.create-job header .logo .button#logo:hover {
+  opacity: 0.7;
+}
+.create-job header .logo .button#logo:focus, .create-job header .logo .button#logo:active {
+  outline: 0;
+}
+.create-job main {
+  width: 100%;
+  height: calc(100vh - 70px);
+  display: grid;
+  grid-template-columns: 30% 70%;
+  background: transparent;
+}
+.create-job main .navigation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-left: 24px;
+  padding-top: 12px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-right: 1px solid #e1e6ef;
+  overflow: hidden;
+}
+.create-job main .navigation .goback {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 14px;
+}
+.create-job main .navigation .goback button#goto-prev-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0px;
+  height: 45px;
+  color: #656F7C;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+.create-job main .navigation .goback button#goto-prev-page .icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 8px;
+  padding-left: 8px;
+}
+.create-job main .navigation .goback button#goto-prev-page .icon svg {
+  width: 24px;
+  height: 20px;
+}
+.create-job main .navigation .goback button#goto-prev-page .text {
+  flex: 1;
+  font-size: 1em;
+  font-weight: 600;
+  margin-top: -6px;
+}
+.create-job main .navigation .goback button#goto-prev-page:hover {
+  color: #0d2551;
+}
+.create-job main .navigation .goback button#goto-prev-page:hover .icon {
+  padding-left: 0px;
+}
+.create-job main .navigation .goback button#goto-prev-page:focus, .create-job main .navigation .goback button#goto-prev-page:active {
+  outline: 0;
+}
+.create-job main .navigation .progress-container {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  padding: 20px 0px 0px 30px;
+  align-items: center;
+  background: transparent;
+  justify-content: flex-end;
+}
+.create-job main .navigation .progress-container nav.nav-menu {
+  width: 100%;
+  height: 100%;
+}
+.create-job main .navigation .progress-container nav.nav-menu ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-left: 12px;
+  position: relative;
+}
+.create-job main .navigation .progress-container nav.nav-menu ul li.nav-item {
+  width: 100%;
+  z-index: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+  position: relative;
+}
+.create-job main .navigation .progress-container nav.nav-menu ul li.nav-item .nav-link {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 1.25em;
+  background: transparent;
+  border: none;
+  justify-content: flex-start;
+}
+.create-job main .navigation .progress-container nav.nav-menu ul li.nav-item .nav-link .text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  padding-top: 18px;
+  margin-left: 40px;
+}
+.create-job main .navigation .progress-container nav.nav-menu ul li.nav-item .nav-link .text .title {
+  font-size: 0.975em;
+  font-weight: 600;
+  color: #0d2551;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 5px;
+}
+.create-job main .navigation .progress-container nav.nav-menu ul li.nav-item .nav-link .text .status {
+  visibility: hidden;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #40B995;
+  opacity: 1;
+}
+.create-job main .navigation .progress-container nav.nav-menu ul li.nav-item .nav-link .icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: auto 0px;
+  padding: 0.44rem;
+  border-radius: 50px;
+  background: #FAFCFF;
+  border: 2px solid #0d2551;
+}
+.create-job main .navigation .progress-container nav.nav-menu ul li.nav-item .nav-link .icon svg {
+  height: auto;
+  width: 100%;
+  fill: #0d2551;
+}
+.create-job main .navigation .progress-container nav.nav-menu ul li.nav-item .nav-link.active {
+  cursor: pointer;
+}
+.create-job main .navigation .progress-container nav.nav-menu ul li.nav-item .nav-link.active .text .title {
+  color: #0a62ff;
+}
+.create-job main .navigation .progress-container nav.nav-menu ul li.nav-item .nav-link.active .icon {
+  background: #0a62ff;
+  border-color: #0a62ff;
+}
+.create-job main .navigation .progress-container nav.nav-menu ul li.nav-item .nav-link.active .icon svg {
+  fill: #FAFCFF;
+}
+.create-job main .navigation .progress-container nav.nav-menu ul li.nav-item .nav-link.completed .text .status {
+  visibility: visible;
+}
+.create-job main .navigation .progress-container nav.nav-menu ul li.nav-item .nav-link.completed .icon {
+  background: #DFF6EE;
+  border-color: #DFF6EE;
+}
+.create-job main .navigation .progress-container nav.nav-menu ul li.nav-item .nav-link.completed .icon svg {
+  fill: #40B995;
+}
+.create-job main .navigation .progress-container nav.nav-menu ul li.nav-item .nav-link:focus, .create-job main .navigation .progress-container nav.nav-menu ul li.nav-item .nav-link:active {
+  outline: 0;
+}
+.create-job main .navigation .progress-container nav.nav-menu ul::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 84%;
+  background: rgba(187, 191, 197, 0.35);
+  top: 50%;
+  transform: translateY(-50%);
+  left: 51px;
+  z-index: 0;
+}
+.create-job main .form-area {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0px;
+  padding-top: 50px;
+  position: relative;
+  display: grid;
+  grid-template-rows: 86% 14%;
+}
+.create-job main .form-area .form-container {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #FAFCFF;
+  position: relative;
+  padding: 0px 50px;
+}
+.create-job main .form-area .back-forth-container {
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  padding: 14px 68px;
+  align-items: center;
+  background: transparent;
+  justify-content: space-between;
+  box-shadow: 0px 0px 8px 1px #e1e1e1;
+}
+.create-job main .form-area .back-forth-container .button.navigator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #0d2551;
+  background-color: #FAFCFF;
+  border: 2px solid #0d2551;
+  border-radius: 50px;
+  transition: all 200ms ease;
+  cursor: pointer;
+  width: 150px;
+  padding: 0;
+  height: 100%;
+}
+.create-job main .form-area .back-forth-container .button.navigator:last-of-type {
+  width: 175px;
+  background: #25CC88;
+  color: #FAFCFF;
+  border-color: #25CC88;
+}
+.create-job main .form-area .back-forth-container .button.navigator:last-of-type:hover {
+  background-color: #1da770;
+  border-color: #1da770;
+}
+.create-job main .form-area .back-forth-container .button.navigator:hover {
+  background: #0d2551;
+  color: #FAFCFF;
+}
+.create-job main .form-area .back-forth-container .button.navigator.disable, .create-job main .form-area .back-forth-container .button.navigator:disabled, .create-job main .form-area .back-forth-container .button.navigator.disable:disabled {
+  cursor: default;
+  opacity: 0.5;
+  border-color: gray;
+  color: gray;
+  background: #FAFCFF;
+}
+.create-job main .form-area .back-forth-container .button.navigator:focus, .create-job main .form-area .back-forth-container .button.navigator:active {
+  outline: 0;
+}

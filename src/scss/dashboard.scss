@@ -1,0 +1,303 @@
+@import './variables.scss';
+
+.page {
+  display: grid;
+  grid-template-columns: 19% 81%;
+  background: $input-bg;
+
+  header {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 0px;
+    padding-top: 20px;
+    border-right: 1px solid $primary-border;
+    $padding-l: 34px;
+
+    .logo {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-top: 8px;
+      padding-left: $padding-l;
+      justify-content: flex-start;
+      background: transparent;
+
+      .button#logo {
+        font-family: $primary-font;
+        color: $primary-color;
+        font-weight: 800;
+        font-size: 1.75em;
+        background: transparent;
+        border: none;
+        padding: 0;
+        height: max-content;
+
+        span.mark {
+          display: inline-block;
+          width: 9px;
+          height: 9px;
+          background: #f64f3c;
+          margin-left: -5px;
+          border-radius: 50%;
+        }
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        &:focus, &:active {
+          outline: 0;
+        }
+      }
+    }
+
+    .profile {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      padding: 0;
+      padding-left: $padding-l;
+      align-items: center;
+      justify-content: flex-start;
+      align-items: center;
+      
+      .avatar {
+        width: 48px;
+        height: 48px;
+        border: none;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5em 0.3em;
+        padding-top: 0.75em;
+        $profile-pc: #54C6AA;
+        $profile-st: #433CE4;
+        background: $profile-pc;
+        box-shadow: #1f1b66a4 1px 1px 4px 0px inset;
+        margin-right: 16px;
+
+        &.student {
+          background: $profile-st;
+        }
+
+        svg {
+          width: auto;
+          height: 100%;
+        }
+      }
+
+      .details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        .username {
+          display: flex;
+          width: 100%;
+          height: 22px;
+          padding-left: 4px;
+          margin-bottom: 6px;
+          align-items: center;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          overflow-x: auto;
+          overflow-y: hidden;
+
+          p {
+            padding: 0;
+            margin: 0;
+            color: $primary-color;
+            font-size: 0.9em;
+            font-weight: 700;
+          }
+        }
+
+        .annotation {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: flex-start;
+
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.615em;
+            font-weight: 500;
+            height: 18px;
+            padding: 0.25em 1.65em 0.25em;
+            border-radius: 50px;
+
+            &.student {
+              color: rgb(0, 85, 0);
+              border: 1px solid rgb(0, 85, 0);
+              background: rgba(85, 255, 85, 0.75);
+            }
+
+            &.co-ordinator {
+              color: rgb(255, 102, 0);
+              border: 1px solid rgb(255, 102, 0);
+              background: rgb(255, 236, 130);
+            }
+
+            &.administrator {
+              color: rgb(245, 80, 84);
+              border: 1px solid rgb(245, 80, 84);
+              background: rgb(253, 238, 237);
+            }
+          }
+        }
+      }
+    }
+
+    .navbar {
+      flex: 1;
+      border: none;
+      margin-bottom: 24px;
+      width: 100%;
+      max-height: 450px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      position: relative;
+
+      button.navitem {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        width: 100%;
+        height: 34px;
+        border: none;
+        padding: 0px;
+        padding-left: $padding-l;
+        padding-right: $padding-l;
+        cursor: pointer;
+        background: transparent;
+        font-size: 0.975em;
+        font-weight: 600;
+        font-family: $primary-font;
+        transition: all 100ms ease;
+        color: $font-color;
+        border-right: 4px solid transparent;
+        position: relative;
+
+        &.noty-updates {
+          height: 34px;
+          $col: #444;
+          color: $col;
+          font-weight: 700;
+          transition: all 200ms ease;
+          position: relative;
+
+          &:before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            left: 13px;
+            border-radius: 50%;
+            background: $col;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        
+        span.icon, span.text {
+          display: block;
+        }
+
+        span.icon svg {
+          width: auto;
+          height: 1em;
+          fill: $font-color;
+
+          &.ionicon {
+            height: 1.15em;
+          }
+        }
+
+        &:hover {
+          color: $primary-color;
+
+          span.icon svg {
+            fill: $primary-color;
+          }
+        }
+
+        &:focus, &:active {
+          outline: 0;
+        }
+      }
+
+      .menu {
+        width: 100%;
+
+        ul {
+          padding: 14px 0px;
+          margin: 0;
+          list-style: none;
+          width: 100%;
+          height: 100%;
+
+          li {
+            width: 100%;
+            margin: 10px auto;
+
+            button {
+
+              &.active {
+                border-right: 4px solid $mark;
+                color: $mark;
+
+                span.icon svg {
+                  fill: $mark;
+                }
+
+              }
+            }
+
+          }
+        }
+      }
+
+      .options {
+        width: 100%;
+        border: none;
+      }
+
+    }
+
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+    padding-right: 2px;
+
+    .main-wrapper {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      padding: 12px 48px 28px 48px;
+      max-height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+  }
+
+}

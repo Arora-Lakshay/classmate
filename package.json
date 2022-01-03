@@ -1,0 +1,35 @@
+{
+  "name": "classmate",
+  "version": "1.0.0",
+  "description": "Classmate is a smart hustle free software platform that lets training and placement departments organize and manage college placement activities all through one private dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "watch": "npx mix watch"
+  },
+  "author": "Lakshay Arora",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "formidable": "^1.2.2",
+    "http-errors": "^1.8.0",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.5",
+    "morgan": "^1.10.0",
+    "redis": "^3.1.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "laravel-mix": "^6.0.31",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.39.2",
+    "sass-loader": "^12.1.0"
+  }
+}

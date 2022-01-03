@@ -1,0 +1,120 @@
+<div class="header">
+  <h1>Sign Up</h1>
+  <p>Come on, Let's get your opportunities Out !</p>
+</div>
+
+<div class="form register">
+  <form id="auth-register-form" method="post" action="/api/auth/register">
+    <div class="half-container">
+      <fieldset>
+        <legend>
+          First Name
+          <span style="color: orangered;">*</span>
+        </legend>
+        <div class="tooltip">
+          <span>
+            <code>i</code>
+            <p>Enter your first name and it must be less than 30 characters</p>
+          </span>
+        </div>
+        <div class="avalid input">
+          <input tabindex="1" id="fname" name="firstname" required type="text" minlength="3" maxlength="30"
+            autocomplete="off" />
+          <span class="hidden">&check;</span>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          Last Name
+          <span style="color: orangered;">*</span>
+        </legend>
+        <div class="tooltip">
+          <span>
+            <code>i</code>
+            <p>Enter your last name and it must be less than 30 characters</p>
+          </span>
+        </div>
+        <div class="avalid input">
+          <input tabindex="2" id="lname" name="lastname" required type="text" minlength="3" maxlength="30"
+            autocomplete="off" />
+          <span class="hidden">&check;</span>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="half-container">
+      <fieldset>
+        <legend>
+          UID
+          <span style="color: orangered;">*</span>
+        </legend>
+        <div class="tooltip">
+          <span>
+            <code>i</code>
+            <p>Enter your Univ. Roll Number / UID</p>
+          </span>
+        </div>
+        <div class="avalid input">
+          <input tabindex="3" id="uid" name="uid" required type="number" autocomplete="off" />
+          <span class="hidden">&check;</span>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          Email
+          <span style="color: orangered;">*</span>
+        </legend>
+        <div class="tooltip">
+          <span>
+            <code>i</code>
+            <p>Enter a valid email</p>
+          </span>
+        </div>
+        <div class="avalid input">
+          <input tabindex="4" id="email" name="email" required type="email" autocomplete="off" />
+          <span class="hidden">&check;</span>
+        </div>
+      </fieldset>
+    </div>
+
+    <fieldset>
+      <legend>
+        Password
+        <span style="color: orangered;">*</span>
+      </legend>
+      <div class="tooltip">
+        <span>
+          <code>i</code>
+          <p>Password must contain minimum eight characters having at least one letter, one number and one special
+            character
+          </p>
+        </span>
+      </div>
+      <div class="avalid input">
+        <input tabindex="5" id="password" name="password" required type="password" minlength="8" autocomplete="off" />
+        <button type="button" class="toggle">show</button>
+        <span class="hidden">&check;</span>
+      </div>
+    </fieldset>
+
+    <div class="terms">
+      <input tabindex="6" type="checkbox" required id="agree" />
+      <label for="agree">I agree with all Terms of Services and Privacy Policy
+        <span style="color: orangered;">*</span>
+      </label>
+    </div>
+
+    <button tabindex="7" id="register-submit" class="button submit" type="submit">Sign Up</button>
+  </form>
+  <div class="footer">
+    <p>Already have an account ?
+      <a href="/login">
+        <span>Sign In</span>
+      </a>
+    </p>
+  </div>
+</div>
+
+<script src="/js/register.js"></script>

@@ -1,0 +1,87 @@
+<div class="form-container">
+
+  <div class="step-count">
+    <span class="count">Step 5/6</span>
+    <span class="draft-status"></span>
+  </div>
+  <div class="step-header">
+    <h2 class="title">5. Mention Salary & Perks for this job profile</h2>
+  </div>
+
+  <form id="salary-stipend-form">
+    <fieldset>
+      <legend>
+        Stipend / Salary
+        <span style="color: orangered;">*</span>
+      </legend>
+      <div class="tooltip">
+        <span>
+          <code>i</code>
+          <p>Enter the salary amount along with breakdown</p>
+        </span>
+      </div>
+      <div class="avalid input">
+        <textarea type="text" tabindex="1" id="job-stipend-salary" name="jobSalary" required minlength="3"
+          maxlength="1000" autocomplete="off"></textarea>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        Job Type
+        <span style="color: orangered;">*</span>
+      </legend>
+      <div class="radio input">
+        <label>
+          <input type="radio" value="In-Office" name="jobType" />
+          <span>In-Office</span>
+        </label>
+        <label>
+          <input type="radio" value="Work From Home" name="jobType" />
+          <span>Work From Home</span>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        Job Timing
+        <span style="color: orangered;">*</span>
+      </legend>
+      <div class="radio input">
+        <label>
+          <input type="radio" value="Full-Time" name="jobTiming" />
+          <span>Full-Time</span>
+        </label>
+        <label>
+          <input type="radio" value="Part-Time" name="jobTiming" />
+          <span>Part-Time</span>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        Perks & Benefits
+      </legend>
+      <div class="input chipped">
+        <% const catg=[{label: "Certificate" , id: "perks-certificate" }, {label: "Letter of Recommendation" ,
+          id: "perks-recommendation" }, {label: "Flexible Work Hours" , id: "perks-work-hours" },
+          {label: "5 Days a week" , id: "perks-days-in-week" }, {label: "Accomodation" , id: "perks-accomodation" }]; %>
+          <% catg.forEach((item, i)=> { %>
+            <div class="category-chip">
+              <input type="checkbox" value="<%= item.label %>" id="<%= item.id %>">
+              <label for="<%= item.id %>">
+                <%= item.label %>
+              </label>
+            </div>
+            <% }); %>
+      </div>
+    </fieldset>
+  </form>
+
+</div>
+<div class="back-forth-container">
+  <button id="next-section-button" type="submit" form="salary-stipend-form" class="button navigator">Save &
+    Continue</button>
+</div>

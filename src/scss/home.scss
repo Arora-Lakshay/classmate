@@ -1,0 +1,264 @@
+@import "./variables.scss";
+
+.home {
+  overflow: hidden;
+  user-select: none;
+  padding: 0 $padding;
+  background: $background;
+
+  header {
+    width: 100%;
+    height: 62px;
+    display: flex;
+    padding: 0 $padding;
+    padding-top: 22px;
+    align-items: center;
+    background: transparent;
+    justify-content: space-between;
+
+    .logo {
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+
+      .button#logo {
+        font-family: $primary-font;
+        color: $primary-color;
+        font-weight: 800;
+        font-size: 2em;
+        background: transparent;
+        border: none;
+        padding: 0;
+        height: max-content;
+
+        span.mark {
+          display: inline-block;
+          width: 9px;
+          height: 9px;
+          background: #f64f3c;
+          margin-left: -5px;
+          border-radius: 50%;
+        }
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        &:focus, &:active {
+          outline: 0;
+        }
+      }
+    }
+
+    .options {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .item {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 25px;
+
+        .button#signin {
+          color: $primary-color;
+          background: transparent;
+          border: none;
+          padding: 0;
+          font-size: $font;
+          height: 100%;
+          font-weight: 600;
+
+          &:hover {
+            opacity: 0.7;
+          }
+  
+          &:focus, &:active {
+            outline: 0;
+            opacity: 0.7;
+          }
+        }
+
+        .button#get-started {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $input-bg;
+          border: none;
+          box-shadow: 0px 0px 0px 2px $primary-color;
+          border-radius: 50px;
+          background: $primary-color;
+          font-size: $font;
+          width: 150px;
+          padding: 0.67em;
+          transition: all 200ms ease;
+
+          &:hover {
+            background: transparent;
+            color: $primary-color;
+            font-weight: 500;
+          }
+  
+          &:focus, &:active {
+            outline: 0;
+            opacity: 0.7;
+            background: transparent;
+            color: $primary-color;  
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    padding: 0 $padding;
+
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 45px;
+      margin-top: 45px;
+
+      .content {
+        flex: 1;
+      }
+
+      .content.express {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        
+      }
+
+      .content.pipes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .content.interactive {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .content.heading {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        flex: none;
+
+        h2 {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          font-family: $primary-font;
+          color: $primary-color;
+          font-size: 3.5em;
+          margin: 4px 0px;
+
+          &.right {
+            justify-content: flex-end;
+          }
+          &.justify {
+            justify-content: center;
+          }
+          &.left {
+            justify-content: flex-start;
+          }
+        }
+      }
+
+      .content.cta {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .text {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+
+          span.highlight {
+            font-weight: 600;
+          }
+
+          p {
+            font-size: 1.1em;
+            margin: 6px 0px;
+            color: $primary-color;
+            font-weight: 500;
+          }
+        }
+
+        .custom-btn {
+          margin-top: 30px;
+          height: 50px;
+          color: $input-bg;
+          border-radius: 5px;
+          padding: 10px 25px;
+          font-weight: 500;
+          background: transparent;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          position: relative;
+          display: inline-block;
+           box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+           7px 7px 20px 0px rgba(0,0,0,.1),
+           4px 4px 5px 0px rgba(0,0,0,.1);
+          outline: none;
+        }        
+
+        .custom-btn#cta {
+          border: none;
+          background: $primary-bg;
+            background: linear-gradient(45deg, rgb(10, 98, 255, 1) 0%, rgb(117, 7, 240, 1) 100%);
+            color: $input-bg;
+            overflow: hidden;
+
+        &:hover {
+            text-decoration: none;
+            color: $input-bg;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            display: inline-block;
+            top: -180px;
+            left: 0;
+            width: 30px;
+            height: 100%;
+            background-color: $input-bg;
+            animation: shine 3s ease-in-out infinite;
+        }
+        &:hover{
+          opacity: .7;
+        }
+        &:active{
+          box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+                      -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+            inset -4px -4px 6px 0 rgba(255,255,255,.2),
+            inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+        }
+      }
+        
+        
+        @keyframes shine {
+            0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+            80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+            81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+            100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+        }        
+      }
+    }
+  }
+
+}

@@ -1,0 +1,29 @@
+<div class="draft-content-wrapper">
+  <h2 class="draft-header">Saved Drafts</h2>
+
+  <section class="drafts-listing">
+    <div class="drafts-container">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <ul class="job-list">
+            <% allDrafts.forEach(d=> { %>
+              <li class="job-preview">
+                <div class="content float-left">
+                  <h4 class="job-title">
+                    <%= d.title %>
+                  </h4>
+                  <h5 class="company">
+                    <%= d.company %>
+                  </h5>
+                </div>
+                <a href="/in/create-job/<%= d.token %>/edit" class="btn btn-apply float-sm-right float-xs-left">
+                  Edit Draft
+                </a>
+              </li>
+              <% }); %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

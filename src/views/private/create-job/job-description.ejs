@@ -1,0 +1,41 @@
+<div class="form-container">
+
+  <div class="step-count">
+    <span class="count">Step 4/6</span>
+    <span class="draft-status"></span>
+  </div>
+  <div class="step-header">
+    <h2 class="title">4. Describe the complete Job Description</h2>
+  </div>
+
+  <div class="note">
+    <p>This field helps you to mention the details of this internship/job/project. It is better to include
+      Responsibilities, Qualification, Skills Required, Application Process, Stipend/Salary, etc. in order to get
+      the opportunity approved. The more details, the better!</p>
+  </div>
+
+  <form id="job-description-form">
+    <fieldset>
+      <legend>
+        Job Description
+        <span style="color: orangered;">*</span>
+      </legend>
+      <div class="avalid input">
+        <textarea tabindex="1" id="application-job-description" name="jobDescription" required type="text"
+          minlength="100" maxlength="5000" autocomplete="off"></textarea>
+      </div>
+    </fieldset>
+  </form>
+
+</div>
+<div class="back-forth-container">
+  <button id="next-section-button" type="submit" form="job-description-form" class="button navigator">Save &
+    Continue</button>
+</div>
+
+<% if (options.containsDraftData && options.draftData) { %>
+  <script>
+    const ip = document.querySelector(".create-job main .form-area .form-container form fieldset .avalid.input textarea[name='jobDescription']");
+    ip.value = "<%= options.draftData.jobDescription?.value %>";
+  </script>
+  <% } %>

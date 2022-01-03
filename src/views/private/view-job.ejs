@@ -1,0 +1,2313 @@
+<% function formatDate(d) { %>
+  <% return new Date(d).toLocaleString(undefined, {timeZone: 'Asia/Kolkata' , year: 'numeric' , month: 'short' ,
+    day: 'numeric' , hour:"2-digit", minute: "2-digit" }); %>
+    <% } %>
+      <% function daysBetween(date1String, date2String) { %>
+        <% let d1=new Date(date1String); %>
+          <% let d2=new Date(date2String); %>
+            <% return (d2-d1)/(1000*3600*24); %>
+              <% } %>
+                <main class="viewjob-wrapper">
+
+                  <section class="upper-banner">
+                    <div class="navigation">
+                      <div class="goback">
+                        <button id="goto-prev-page">
+                          <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                              <title>Back</title>
+                              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="42" d="M244 400L100 256l144-144M120 256h292" />
+                            </svg>
+                          </span>
+                          <span class="text">Back</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="banner-bg">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 328 520"
+                        style="enable-background:new 0 0 328 520;" xml:space="preserve">
+                        <style type="text/css">
+                          .st0 {
+                            fill: url(#SVGID_1_);
+                          }
+
+                          .st1 {
+                            fill: url(#SVGID_00000001639778587045568960000012224470230364679844_);
+                          }
+
+                          .st2 {
+                            clip-path: url(#SVGID_00000150812598442768372280000010096524375161027231_);
+                          }
+
+                          .st3 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #704A97;
+                          }
+
+                          .st4 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #FEEDB4;
+                          }
+
+                          .st5 {
+                            fill: none;
+                            stroke: #FBCB22;
+                            stroke-width: 2.0471;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 4.7474;
+                          }
+
+                          .st6 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #FBCB22;
+                          }
+
+                          .st7 {
+                            fill: none;
+                            stroke: #ECA400;
+                            stroke-width: 0.9751;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 1.7744;
+                          }
+
+                          .st8 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #FEBBAA;
+                          }
+
+                          .st9 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000136369369079318868500000004504054345599236519_);
+                          }
+
+                          .st10 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #ECA400;
+                          }
+
+                          .st11 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000164473916334724693300000007963000137854667665_);
+                          }
+
+                          .st12 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000025438281918739538930000016765850732005480856_);
+                          }
+
+                          .st13 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000015356946124871504180000009857631741388558262_);
+                          }
+
+                          .st14 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000074429858959371552870000000930677112528407483_);
+                          }
+
+                          .st15 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000098901743337104274950000011505439673097436323_);
+                          }
+
+                          .st16 {
+                            fill: none;
+                            stroke: #ECA400;
+                            stroke-width: 11.6314;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 4.2119;
+                          }
+
+                          .st17 {
+                            fill: none;
+                            stroke: #ECA400;
+                            stroke-width: 2.332;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 4.3755;
+                          }
+
+                          .st18 {
+                            fill: none;
+                            stroke: #FEEDB4;
+                            stroke-width: 6.9973;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 4.2231;
+                          }
+
+                          .st19 {
+                            clip-path: url(#SVGID_00000081619020410909414920000008746994613347887514_);
+                          }
+
+                          .st20 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #FF4759;
+                          }
+
+                          .st21 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #F2C0A2;
+                          }
+
+                          .st22 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000058552021416863346340000006386786063045783183_);
+                          }
+
+                          .st23 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #CC8E00;
+                          }
+
+                          .st24 {
+                            fill: none;
+                            stroke: #FDE282;
+                            stroke-width: 1.3034;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 1.7744;
+                          }
+
+                          .st25 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #FDE282;
+                          }
+
+                          .st26 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000133507969905583192330000014562640148367878055_);
+                          }
+
+                          .st27 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000016766786051148402070000006550152132405784727_);
+                          }
+
+                          .st28 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000119113471590237919120000011080895653756734132_);
+                          }
+
+                          .st29 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000020372867588875371550000005853331229916045451_);
+                          }
+
+                          .st30 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000083075749672961885180000013472539560668983939_);
+                          }
+
+                          .st31 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #FFC801;
+                          }
+
+                          .st32 {
+                            clip-path: url(#SVGID_00000159470938491124158760000010610610962793676691_);
+                          }
+
+                          .st33 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #FFBC97;
+                          }
+
+                          .st34 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000121275674547376067180000004998903110872572067_);
+                          }
+
+                          .st35 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000177458826488428735650000008641760930139639198_);
+                          }
+
+                          .st36 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000106113180752369935330000006820195442922683039_);
+                          }
+
+                          .st37 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000064316341284779133120000010034682137359188395_);
+                          }
+
+                          .st38 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000127017667087652412130000015274586909155215026_);
+                          }
+
+                          .st39 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000083789878978432676330000006749487200926265242_);
+                          }
+
+                          .st40 {
+                            clip-path: url(#SVGID_00000086671212658724232270000000445623344783168147_);
+                          }
+
+                          .st41 {
+                            fill: #FFC801;
+                          }
+
+                          .st42 {
+                            fill: none;
+                            stroke: #704A97;
+                            stroke-width: 8;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st43 {
+                            fill: #FFFFFF;
+                          }
+
+                          .st44 {
+                            fill: #434343;
+                          }
+
+                          .st45 {
+                            fill: #176EDE;
+                          }
+
+                          .st46 {
+                            fill: #FF4759;
+                          }
+
+                          .st47 {
+                            fill: #C61832;
+                          }
+
+                          .st48 {
+                            fill: #704A97;
+                          }
+
+                          .st49 {
+                            clip-path: url(#SVGID_00000129928834348466579600000017572173372268566944_);
+                          }
+
+                          .st50 {
+                            fill: none;
+                            stroke: #8ADF14;
+                            stroke-width: 1.8501;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st51 {
+                            fill: none;
+                            stroke: url(#SVGID_00000045607042165307437110000008708634017888069567_);
+                            stroke-width: 8.9371;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st52 {
+                            fill: url(#SVGID_00000018938040838864856230000010917580926405729929_);
+                          }
+
+                          .st53 {
+                            opacity: 0.5;
+                            fill: none;
+                            stroke: #A50827;
+                            stroke-width: 1.7874;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st54 {
+                            fill: url(#SVGID_00000127005442705841940270000014690988909469228722_);
+                          }
+
+                          .st55 {
+                            fill: url(#SVGID_00000040556127803158380650000013183352858499008700_);
+                          }
+
+                          .st56 {
+                            opacity: 0.5;
+                            fill: #A50827;
+                          }
+
+                          .st57 {
+                            opacity: 0.5;
+                            fill: none;
+                            stroke: #A50827;
+                            stroke-width: 1.7874;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st58 {
+                            fill: none;
+                            stroke: #FFC801;
+                            stroke-width: 6.256;
+                            stroke-linecap: round;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st59 {
+                            fill: url(#SVGID_00000021840848673305132020000006643598251232208275_);
+                          }
+
+                          .st60 {
+                            fill: url(#SVGID_00000091697507395922855020000012001684936649069459_);
+                          }
+
+                          .st61 {
+                            fill: url(#SVGID_00000155130723510652868470000011837152254165077127_);
+                          }
+
+                          .st62 {
+                            fill: url(#SVGID_00000070094492687614749920000010091147185716809347_);
+                          }
+
+                          .st63 {
+                            fill: url(#SVGID_00000141425833234601876310000008657173942948235942_);
+                          }
+
+                          .st64 {
+                            fill: url(#SVGID_00000127028552057911467970000014817201369744318868_);
+                          }
+
+                          .st65 {
+                            fill: #0B56A8;
+                          }
+
+                          .st66 {
+                            opacity: 0.5;
+                            fill: url(#SVGID_00000128461433363395504060000015043538420203582888_);
+                          }
+
+                          .st67 {
+                            opacity: 0.19;
+                          }
+
+                          .st68 {
+                            opacity: 0.21;
+                            fill: #BA112A;
+                          }
+
+                          .st69 {
+                            fill: #FFE999;
+                          }
+
+                          .st70 {
+                            opacity: 0.21;
+                            fill: #DDA403;
+                          }
+
+                          .st71 {
+                            opacity: 0.36;
+                            fill: #176EDE;
+                          }
+
+                          .st72 {
+                            fill: #DDA403;
+                          }
+
+                          .st73 {
+                            opacity: 0.19;
+                            fill: #DDA403;
+                          }
+
+                          .st74 {
+                            opacity: 0.17;
+                            fill: #DDA403;
+                          }
+
+                          .st75 {
+                            fill: #0013A1;
+                          }
+
+                          .st76 {
+                            fill: #F5ECEE;
+                          }
+
+                          .st77 {
+                            fill: #E82844;
+                          }
+
+                          .st78 {
+                            fill: none;
+                            stroke: #FFC801;
+                            stroke-width: 3.5937;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st79 {
+                            opacity: 0.6;
+                            fill: #FFFFFF;
+                          }
+
+                          .st80 {
+                            fill: #CE0D29;
+                          }
+
+                          .st81 {
+                            fill: #8ADF14;
+                          }
+
+                          .st82 {
+                            fill: #F0F0FF;
+                          }
+
+                          .st83 {
+                            opacity: 0.1;
+                          }
+
+                          .st84 {
+                            fill: #FFFFFF;
+                            stroke: #FFFFFF;
+                            stroke-width: 2.5;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st85 {
+                            clip-path: url(#SVGID_00000093858850869307371400000011572728588602716082_);
+                          }
+
+                          .st86 {
+                            opacity: 0.8;
+                          }
+
+                          .st87 {
+                            fill: #176EDE;
+                            stroke: #176EDE;
+                            stroke-width: 4;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st88 {
+                            opacity: 0.75;
+                            fill: #176EDE;
+                            stroke: #176EDE;
+                            stroke-width: 4;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st89 {
+                            opacity: 0.5;
+                            fill: #176EDE;
+                            stroke: #176EDE;
+                            stroke-width: 4;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st90 {
+                            opacity: 0.25;
+                            fill: #176EDE;
+                            stroke: #176EDE;
+                            stroke-width: 4;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st91 {
+                            opacity: 0.5;
+                          }
+
+                          .st92 {
+                            clip-path: url(#SVGID_00000065052468385559134380000009827589326608460735_);
+                          }
+
+                          .st93 {
+                            clip-path: url(#SVGID_00000124158691584365492540000012835342561192385934_);
+                          }
+
+                          .st94 {
+                            fill: #186EDF;
+                          }
+
+                          .st95 {
+                            fill: none;
+                            stroke: #FF4759;
+                            stroke-width: 1.0611;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st96 {
+                            fill: none;
+                            stroke: #FF4759;
+                            stroke-width: 1.0611;
+                            stroke-miterlimit: 10;
+                            stroke-dasharray: 4.0614, 4.0614;
+                          }
+
+                          .st97 {
+                            fill: none;
+                            stroke: #FF4759;
+                            stroke-width: 1.0611;
+                            stroke-miterlimit: 10;
+                            stroke-dasharray: 4.3672, 4.3672;
+                          }
+
+                          .st98 {
+                            fill: none;
+                            stroke: #FF4759;
+                            stroke-width: 1.0611;
+                            stroke-miterlimit: 10;
+                            stroke-dasharray: 4.1329, 4.1329;
+                          }
+
+                          .st99 {
+                            fill: none;
+                            stroke: #FFC801;
+                            stroke-miterlimit: 10;
+                            stroke-dasharray: 4;
+                          }
+
+                          .st100 {
+                            fill: none;
+                            stroke: #FFC801;
+                            stroke-width: 1.3872;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st101 {
+                            clip-path: url(#SVGID_00000078004346523456797830000017495199640272006532_);
+                          }
+
+                          .st102 {
+                            fill: none;
+                            stroke: #FF4759;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st103 {
+                            fill: none;
+                            stroke: #FF4759;
+                            stroke-miterlimit: 10;
+                            stroke-dasharray: 5.071, 5.071;
+                          }
+
+                          .st104 {
+                            fill: none;
+                            stroke: #FF4759;
+                            stroke-miterlimit: 10;
+                            stroke-dasharray: 3.7405, 3.7405;
+                          }
+
+                          .st105 {
+                            fill: none;
+                            stroke: #FF4759;
+                            stroke-miterlimit: 10;
+                            stroke-dasharray: 3.3959, 3.3959;
+                          }
+
+                          .st106 {
+                            clip-path: url(#SVGID_00000072254192667532558320000007006558978120000128_);
+                          }
+
+                          .st107 {
+                            fill: #4C326D;
+                          }
+
+                          .st108 {
+                            fill: #ADCFD8;
+                          }
+
+                          .st109 {
+                            fill: #DAEEF7;
+                          }
+
+                          .st110 {
+                            fill: #CC1D36;
+                          }
+
+                          .st111 {
+                            fill: #0D5DB5;
+                          }
+
+                          .st112 {
+                            opacity: 0.5;
+                            fill: #4C326D;
+                          }
+
+                          .st113 {
+                            fill: none;
+                            stroke: #FFC801;
+                            stroke-width: 2.9643;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st114 {
+                            clip-path: url(#SVGID_00000109014458117438629420000012958474718653236390_);
+                          }
+
+                          .st115 {
+                            fill: #324446;
+                          }
+
+                          .st116 {
+                            fill: #4E6566;
+                          }
+
+                          .st117 {
+                            opacity: 0.5;
+                            fill: #0B2025;
+                          }
+
+                          .st118 {
+                            filter: url(#Adobe_OpacityMaskFilter);
+                          }
+
+                          .st119 {
+                            fill: url(#SVGID_00000048478692471768030960000005242491580938941117_);
+                          }
+
+                          .st120 {
+                            opacity: 0.7;
+                            mask: url(#SVGID_00000115474688068856373200000006483810884510541736_);
+                            fill: #434343;
+                          }
+
+                          .st121 {
+                            opacity: 0;
+                            fill: #0B2025;
+                          }
+
+                          .st122 {
+                            opacity: 0.4;
+                            fill: #0B2025;
+                          }
+
+                          .st123 {
+                            fill: #E5AF03;
+                          }
+
+                          .st124 {
+                            fill: url(#SVGID_00000039100330912124257130000004744737113402855581_);
+                          }
+
+                          .st125 {
+                            fill: url(#SVGID_00000038383307398643835300000002407448945502066344_);
+                          }
+
+                          .st126 {
+                            fill: #AA160B;
+                          }
+
+                          .st127 {
+                            fill: #CCCACB;
+                          }
+
+                          .st128 {
+                            fill: #B5C0C9;
+                          }
+
+                          .st129 {
+                            opacity: 0.4;
+                            fill: #90A3AF;
+                          }
+
+                          .st130 {
+                            fill: #F8FFFF;
+                          }
+
+                          .st131 {
+                            opacity: 0.5;
+                            fill: #B3C0C6;
+                          }
+
+                          .st132 {
+                            opacity: 0.4;
+                            fill: #434343;
+                          }
+
+                          .st133 {
+                            fill: #E6E6E6;
+                          }
+
+                          .st134 {
+                            fill: #90A3AF;
+                          }
+
+                          .st135 {
+                            opacity: 0.5;
+                            fill: #D11C36;
+                          }
+
+                          .st136 {
+                            enable-background: new;
+                          }
+
+                          .st137 {
+                            fill: #D11C36;
+                          }
+
+                          .st138 {
+                            fill: #A80928;
+                          }
+
+                          .st139 {
+                            opacity: 0.6;
+                            fill: #28281E;
+                          }
+
+                          .st140 {
+                            fill: none;
+                            stroke: #FFC801;
+                            stroke-width: 2.3715;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st141 {
+                            clip-path: url(#SVGID_00000098206124585220439310000005019436449368781496_);
+                          }
+
+                          .st142 {
+                            fill: #FEC900;
+                          }
+
+                          .st143 {
+                            opacity: 0.75;
+                          }
+
+                          .st144 {
+                            fill: none;
+                            stroke: #176EDE;
+                            stroke-width: 5;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st145 {
+                            fill: none;
+                            stroke: #176EDE;
+                            stroke-width: 5;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st146 {
+                            clip-path: url(#SVGID_00000098931209682591668670000010972476920226099094_);
+                          }
+                        </style>
+                        <g>
+                          <defs>
+                            <rect id="SVGID_00000071548772825048121860000013369245367302505366_" width="328"
+                              height="520" />
+                          </defs>
+                          <clipPath id="SVGID_00000022553864930621666810000010347042880183838856_">
+                            <use xlink:href="#SVGID_00000071548772825048121860000013369245367302505366_"
+                              style="overflow:visible;" />
+                          </clipPath>
+                          <g style="clip-path:url(#SVGID_00000022553864930621666810000010347042880183838856_);">
+                            <circle class="st41" cx="75" cy="345" r="125" />
+                            <circle class="st46" cx="218" cy="130" r="60" />
+                            <g>
+                              <g>
+                                <path class="st107"
+                                  d="M256,261.2l-48.9,19.6l-60.6-150.8l41.4-16.6c4.2-1.7,8.9,0.3,10.6,4.5L256,261.2z" />
+                                <g>
+
+                                  <rect x="155.7" y="131.2"
+                                    transform="matrix(0.9846 -0.1746 0.1746 0.9846 -31.4507 38.5211)" class="st108"
+                                    width="95.1" height="133.8" />
+
+                                  <rect x="172.7" y="145.3"
+                                    transform="matrix(0.9846 -0.1746 0.1746 0.9846 -22.4634 36.0892)" class="st107"
+                                    width="42.5" height="1" />
+
+                                  <rect x="163.3" y="142.9"
+                                    transform="matrix(0.9846 -0.1746 0.1746 0.9846 -22.0539 35.9783)" class="st107"
+                                    width="60.3" height="1" />
+
+                                  <rect x="159.1" y="155.1"
+                                    transform="matrix(0.9846 -0.1746 0.1746 0.9846 -24.1582 36.546)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="159.9" y="159.6"
+                                    transform="matrix(0.9846 -0.1746 0.1746 0.9846 -24.9344 36.755)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="161.5" y="168.7"
+                                    transform="matrix(0.9846 -0.1746 0.1746 0.9846 -26.4867 37.1732)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="162.3" y="173.2"
+                                    transform="matrix(0.9846 -0.1746 0.1746 0.9846 -27.2628 37.382)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="163.1" y="177.7"
+                                    transform="matrix(0.9846 -0.1746 0.1746 0.9846 -28.039 37.5912)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="166.6" y="197.6"
+                                    transform="matrix(0.9846 -0.1746 0.1746 0.9846 -31.4531 38.511)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="167.4" y="202.3"
+                                    transform="matrix(0.9846 -0.1746 0.1746 0.9846 -32.2585 38.7285)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="168.3" y="207"
+                                    transform="matrix(0.9846 -0.1746 0.1746 0.9846 -33.0625 38.9442)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="169.1" y="211.6"
+                                    transform="matrix(0.9846 -0.1746 0.1746 0.9846 -33.8684 39.1623)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="169.9" y="216.3"
+                                    transform="matrix(0.9846 -0.1746 0.1746 0.9846 -34.6727 39.3785)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="170.8" y="221"
+                                    transform="matrix(0.9846 -0.1746 0.1746 0.9846 -35.4781 39.5959)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="171.6" y="225.7"
+                                    transform="matrix(0.9846 -0.1746 0.1746 0.9846 -36.2825 39.8122)" class="st107"
+                                    width="73.2" height="1" />
+                                </g>
+                                <g>
+
+                                  <rect x="148.4" y="130.5"
+                                    transform="matrix(0.9671 -0.2545 0.2545 0.9671 -43.7853 56.3686)" class="st109"
+                                    width="95.1" height="133.8" />
+
+                                  <rect x="161.1" y="145.5"
+                                    transform="matrix(0.9671 -0.2545 0.2545 0.9671 -31.1589 51.222)" class="st107"
+                                    width="42.5" height="1" />
+
+                                  <rect x="151.6" y="143.2"
+                                    transform="matrix(0.9671 -0.2545 0.2545 0.9671 -30.5837 50.9879)" class="st107"
+                                    width="60.3" height="1" />
+
+                                  <rect x="148.3" y="155.2"
+                                    transform="matrix(0.9671 -0.2545 0.2545 0.9671 -33.54 52.1894)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="149.5" y="159.7"
+                                    transform="matrix(0.9671 -0.2545 0.2545 0.9671 -34.6306 52.6323)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="151.8" y="168.5"
+                                    transform="matrix(0.9671 -0.2545 0.2545 0.9671 -36.8118 53.5185)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="153" y="173"
+                                    transform="matrix(0.9671 -0.2545 0.2545 0.9671 -37.9029 53.9624)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="154.1" y="177.4"
+                                    transform="matrix(0.9671 -0.2545 0.2545 0.9671 -38.9935 54.4055)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="159.3" y="196.9"
+                                    transform="matrix(0.9671 -0.2545 0.2545 0.9671 -43.7916 56.3565)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="160.5" y="201.5"
+                                    transform="matrix(0.9671 -0.2545 0.2545 0.9671 -44.9219 56.8148)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="161.7" y="206.1"
+                                    transform="matrix(0.9671 -0.2545 0.2545 0.9671 -46.0529 57.2744)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="162.9" y="210.7"
+                                    transform="matrix(0.9671 -0.2545 0.2545 0.9671 -47.184 57.7342)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="164.1" y="215.3"
+                                    transform="matrix(0.9671 -0.2545 0.2545 0.9671 -48.315 58.1938)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="165.3" y="219.9"
+                                    transform="matrix(0.9671 -0.2545 0.2545 0.9671 -49.4464 58.6541)" class="st107"
+                                    width="73.2" height="1" />
+
+                                  <rect x="166.5" y="224.5"
+                                    transform="matrix(0.9671 -0.2545 0.2545 0.9671 -50.5769 59.113)" class="st107"
+                                    width="73.2" height="1" />
+                                </g>
+                                <path class="st48"
+                                  d="M237.5,268.7L139,308.2L81.5,165.2l82.8-51.1c4.7-2.9,10.8-0.9,12.8,4.2L237.5,268.7z" />
+                              </g>
+                              <g>
+                                <path class="st110" d="M316.8,245.8h6.7c-1.1-0.8-2.5-1.2-4-1.2H150.8c-8.8,0-16,6.3-16,14.2v9c0,7.8,7.2,14.2,16,14.2
+					l166.9-0.1L316.8,245.8z" />
+                                <path class="st41" d="M148.9,267.8v-9c0-7.8,7.2-14.2,16-14.2h-3.6c-8.8,0-16,6.3-16,14.2v9c0,7.8,7.2,14.2,16,14.2l3.6,0
+					C156.1,281.9,148.9,275.6,148.9,267.8z" />
+                                <path class="st41" d="M188.4,267.8v-9c0-7.8,7.2-14.2,16-14.2h-3.6c-8.8,0-16,6.3-16,14.2v9c0,7.8,7.2,14.2,16,14.2l3.6,0
+					C195.6,281.9,188.4,275.6,188.4,267.8z" />
+                                <path class="st46" d="M220.9,244.6c-8.4,0-15.3,6.1-15.3,13.6v10.2c0,7.5,6.8,13.6,15.3,13.6H326v-2.3h-0.4l-26.7-2.2l-5.4-18.8
+					c0,0,10.4-10.4,11.1-10.6c0.7-0.3,21-1.1,21-1.1l0.4,0v-2.3H220.9z" />
+                                <path class="st109" d="M319.2,263.2c0-11,6.4-16.3,6.4-16.3H223.1c-7.8,0-14,5.6-14,12.4v7.8c0,6.9,6.3,12.4,14,12.4h102.5
+					C325.6,279.6,319.2,277,319.2,263.2z" />
+                                <path class="st109" d="M209.1,259.3v7.8c0,1,0.1,2,0.4,3c3.5-7.5,10.1-14.7,22.7-17c29.4-5.4,93.4-6.2,93.4-6.2H223.1
+					C215.3,246.9,209.1,252.5,209.1,259.3z" />
+                              </g>
+                              <g>
+                                <path class="st48" d="M314,320.4h7.6c-1.2-0.9-2.8-1.5-4.5-1.5h-191c-10,0-18.1,7.9-18.1,17.7v11.3c0,9.8,8.1,17.7,18.1,17.7
+					l188.9-0.1L314,320.4z" />
+                                <path class="st107" d="M205.5,319c-9.6,0-17.3,7.6-17.3,17v12.7c0,9.4,7.7,17,17.3,17h118.9v-2.8h-0.5l-30.2-2.8l-6.1-23.5
+					c0,0,11.8-13,12.6-13.3c0.8-0.3,23.8-1.4,23.8-1.4l0.5,0V319H205.5z" />
+                                <path class="st109" d="M316.7,342.2c0-13.7,7.2-20.4,7.2-20.4H208c-8.8,0-15.9,7-15.9,15.6v9.8c0,8.6,7.1,15.6,15.9,15.6h116
+					C324,362.8,316.7,359.5,316.7,342.2z" />
+                                <path class="st109" d="M192.1,337.4v9.8c0,1.3,0.2,2.5,0.5,3.7c3.9-9.4,11.4-18.4,25.7-21.3c33.3-6.8,105.7-7.8,105.7-7.8H208
+					C199.2,321.8,192.1,328.8,192.1,337.4z" />
+                              </g>
+                              <g>
+                                <path class="st45" d="M101.7,283h-7.6c1.2-0.7,2.8-1.2,4.5-1.2h191.1c10,0,18.1,6.3,18.1,14.1v8.9c0,7.8-8.1,14.1-18.1,14.1
+					l-188.9,0L101.7,283z" />
+                                <path class="st111" d="M210.2,281.9c9.6,0,17.3,6,17.3,13.5v10.1c0,7.4-7.7,13.5-17.3,13.5H91.2v-2.3h0.5l30.2-2.2l6.1-18.6
+					c0,0-11.8-10.3-12.6-10.6c-0.8-0.3-23.8-1.1-23.8-1.1l-0.5,0v-2.2H210.2z" />
+                                <path class="st109" d="M99,300.3c0-10.9-7.2-16.2-7.2-16.2h116c8.8,0,15.9,5.5,15.9,12.4v7.8c0,6.8-7.1,12.4-15.9,12.4h-116
+					C91.7,316.6,99,314,99,300.3z" />
+                                <path class="st109" d="M223.6,296.5v7.8c0,1-0.2,2-0.5,3c-3.9-7.4-11.4-14.6-25.7-16.9c-33.3-5.4-105.8-6.2-105.8-6.2h116
+					C216.5,284.1,223.6,289.7,223.6,296.5z" />
+                                <path class="st112" d="M272.8,304.8v-8.9c0-7.8-8.1-14.1-18.1-14.1h18.1c10,0,18.1,6.3,18.1,14.1v8.9c0,7.8-8.1,14.1-18.1,14.1
+					l-17.9,0C264.8,318.8,272.8,312.6,272.8,304.8z" />
+                              </g>
+                              <path class="st110" d="M87.3,367.1h-8.2c1.3-0.8,3-1.3,4.9-1.3h206c10.8,0,19.5,7,19.5,15.7v10c0,8.7-8.7,15.7-19.5,15.7
+				l-203.7-0.1L87.3,367.1z" />
+                              <path class="st46" d="M204.2,365.8c10.3,0,18.7,6.7,18.7,15v11.3c0,8.3-8.4,15-18.7,15H76v-2.5h0.5l32.6-2.5l6.6-20.8
+				c0,0-12.7-11.5-13.5-11.8c-0.8-0.3-25.6-1.2-25.6-1.2l-0.5,0v-2.5H204.2z" />
+                              <path class="st109" d="M84.3,386.4c0-12.2-7.8-18.1-7.8-18.1h125.1c9.5,0,17.1,6.2,17.1,13.8v8.7c0,7.6-7.7,13.8-17.1,13.8H76.5
+				C76.5,404.6,84.3,401.7,84.3,386.4z" />
+                              <path class="st109" d="M218.7,382.1v8.7c0,1.1-0.2,2.3-0.5,3.3c-4.2-8.3-12.3-16.3-27.7-18.9c-35.9-6-114-6.9-114-6.9h125.1
+				C211.1,368.3,218.7,374.5,218.7,382.1z" />
+                              <polygon class="st107" points="99,181 166,142.6 175.1,160.6 106.5,196.9 			" />
+                            </g>
+                            <g>
+                              <polygon class="st48" points="53.7,98.1 53.7,43.1 98.5,70.6 			" />
+                              <polygon class="st78" points="73.4,98.1 73.4,43.1 118.3,70.6 			" />
+                            </g>
+                            <g>
+                              <polygon class="st45" points="253.2,490 228.4,465 253.2,440 278,465 			" />
+                              <polygon class="st113" points="234.2,490 209.4,465 234.2,440 259,465 			" />
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 328 520"
+                        style="enable-background:new 0 0 328 520;" xml:space="preserve">
+                        <style type="text/css">
+                          .st0 {
+                            fill: url(#SVGID_1_);
+                          }
+
+                          .st1 {
+                            fill: url(#SVGID_00000093175402127243021830000010897610624802401930_);
+                          }
+
+                          .st2 {
+                            clip-path: url(#SVGID_00000045616298688614330440000000961956169990928274_);
+                          }
+
+                          .st3 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #704A97;
+                          }
+
+                          .st4 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #FEEDB4;
+                          }
+
+                          .st5 {
+                            fill: none;
+                            stroke: #FBCB22;
+                            stroke-width: 2.0471;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 4.7474;
+                          }
+
+                          .st6 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #FBCB22;
+                          }
+
+                          .st7 {
+                            fill: none;
+                            stroke: #ECA400;
+                            stroke-width: 0.9751;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 1.7744;
+                          }
+
+                          .st8 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #FEBBAA;
+                          }
+
+                          .st9 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000156585848840891699940000016873177351008591543_);
+                          }
+
+                          .st10 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #ECA400;
+                          }
+
+                          .st11 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000000910226599482175850000011045672356088168361_);
+                          }
+
+                          .st12 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000059292917130944642920000000847022151308415906_);
+                          }
+
+                          .st13 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000065753989883117929160000009186381751522891954_);
+                          }
+
+                          .st14 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000076571063778587750880000002752199107727918015_);
+                          }
+
+                          .st15 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000091723687667707795780000015517307649263592870_);
+                          }
+
+                          .st16 {
+                            fill: none;
+                            stroke: #ECA400;
+                            stroke-width: 11.6314;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 4.2119;
+                          }
+
+                          .st17 {
+                            fill: none;
+                            stroke: #ECA400;
+                            stroke-width: 2.332;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 4.3755;
+                          }
+
+                          .st18 {
+                            fill: none;
+                            stroke: #FEEDB4;
+                            stroke-width: 6.9973;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 4.2231;
+                          }
+
+                          .st19 {
+                            clip-path: url(#SVGID_00000110433327316192811400000004087798515343545006_);
+                          }
+
+                          .st20 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #FF4759;
+                          }
+
+                          .st21 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #F2C0A2;
+                          }
+
+                          .st22 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000007407317561324044220000012381807587655045524_);
+                          }
+
+                          .st23 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #CC8E00;
+                          }
+
+                          .st24 {
+                            fill: none;
+                            stroke: #FDE282;
+                            stroke-width: 1.3034;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 1.7744;
+                          }
+
+                          .st25 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #FDE282;
+                          }
+
+                          .st26 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000103233127359863262270000004393563718961677969_);
+                          }
+
+                          .st27 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000090975083525377918690000012606520572645740971_);
+                          }
+
+                          .st28 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000104666441647790782810000004307523738225643136_);
+                          }
+
+                          .st29 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000111172597671535422130000005349031294723684278_);
+                          }
+
+                          .st30 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000056413222319667442270000004346745529995709317_);
+                          }
+
+                          .st31 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #FFC801;
+                          }
+
+                          .st32 {
+                            clip-path: url(#SVGID_00000064327821282865929480000000310411035999676544_);
+                          }
+
+                          .st33 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #FFBC97;
+                          }
+
+                          .st34 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000033343769874536111600000008456733162675808942_);
+                          }
+
+                          .st35 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000008146437165260205120000009517813466788663707_);
+                          }
+
+                          .st36 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000121995712493113832850000001038410176012391048_);
+                          }
+
+                          .st37 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000151501770263029308440000016147743994127961748_);
+                          }
+
+                          .st38 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000020390001484224744400000000878225830068144038_);
+                          }
+
+                          .st39 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: url(#SVGID_00000121253871120826486110000012292934787831436447_);
+                          }
+
+                          .st40 {
+                            clip-path: url(#SVGID_00000080166377846602141110000001336984039060696226_);
+                          }
+
+                          .st41 {
+                            fill: #FFC801;
+                          }
+
+                          .st42 {
+                            fill: none;
+                            stroke: #704A97;
+                            stroke-width: 8;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st43 {
+                            fill: #FFFFFF;
+                          }
+
+                          .st44 {
+                            fill: #434343;
+                          }
+
+                          .st45 {
+                            fill: #176EDE;
+                          }
+
+                          .st46 {
+                            fill: #FF4759;
+                          }
+
+                          .st47 {
+                            fill: #C61832;
+                          }
+
+                          .st48 {
+                            fill: #704A97;
+                          }
+
+                          .st49 {
+                            clip-path: url(#SVGID_00000145776073773671528610000003470271894423795336_);
+                          }
+
+                          .st50 {
+                            fill: none;
+                            stroke: #8ADF14;
+                            stroke-width: 1.8501;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st51 {
+                            fill: none;
+                            stroke: url(#SVGID_00000028303650914122561610000015103058102275713446_);
+                            stroke-width: 8.9371;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st52 {
+                            fill: url(#SVGID_00000154398546028219392240000010930197724878589320_);
+                          }
+
+                          .st53 {
+                            opacity: 0.5;
+                            fill: none;
+                            stroke: #A50827;
+                            stroke-width: 1.7874;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st54 {
+                            fill: url(#SVGID_00000178911808335289957900000008255367911838870964_);
+                          }
+
+                          .st55 {
+                            fill: url(#SVGID_00000076603749352849693700000011281123975900727952_);
+                          }
+
+                          .st56 {
+                            opacity: 0.5;
+                            fill: #A50827;
+                          }
+
+                          .st57 {
+                            opacity: 0.5;
+                            fill: none;
+                            stroke: #A50827;
+                            stroke-width: 1.7874;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st58 {
+                            fill: none;
+                            stroke: #FFC801;
+                            stroke-width: 6.256;
+                            stroke-linecap: round;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st59 {
+                            fill: url(#SVGID_00000097486099940478580360000012395108988274741376_);
+                          }
+
+                          .st60 {
+                            fill: url(#SVGID_00000165915777925103018970000017303920834263395746_);
+                          }
+
+                          .st61 {
+                            fill: url(#SVGID_00000170245042928319795400000011495298200964337572_);
+                          }
+
+                          .st62 {
+                            fill: url(#SVGID_00000099632054582522920240000008995105066523753635_);
+                          }
+
+                          .st63 {
+                            fill: url(#SVGID_00000170991927772286587480000000152946415783255680_);
+                          }
+
+                          .st64 {
+                            fill: url(#SVGID_00000131344546827422275050000014555827516424299966_);
+                          }
+
+                          .st65 {
+                            fill: #0B56A8;
+                          }
+
+                          .st66 {
+                            opacity: 0.5;
+                            fill: url(#SVGID_00000021085549652562193380000008840801496469737126_);
+                          }
+
+                          .st67 {
+                            opacity: 0.19;
+                          }
+
+                          .st68 {
+                            opacity: 0.21;
+                            fill: #BA112A;
+                          }
+
+                          .st69 {
+                            fill: #FFE999;
+                          }
+
+                          .st70 {
+                            opacity: 0.21;
+                            fill: #DDA403;
+                          }
+
+                          .st71 {
+                            opacity: 0.36;
+                            fill: #176EDE;
+                          }
+
+                          .st72 {
+                            fill: #DDA403;
+                          }
+
+                          .st73 {
+                            opacity: 0.19;
+                            fill: #DDA403;
+                          }
+
+                          .st74 {
+                            opacity: 0.17;
+                            fill: #DDA403;
+                          }
+
+                          .st75 {
+                            fill: #0013A1;
+                          }
+
+                          .st76 {
+                            fill: #F5ECEE;
+                          }
+
+                          .st77 {
+                            fill: #E82844;
+                          }
+
+                          .st78 {
+                            fill: none;
+                            stroke: #FFC801;
+                            stroke-width: 3.5937;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st79 {
+                            opacity: 0.6;
+                            fill: #FFFFFF;
+                          }
+
+                          .st80 {
+                            fill: #CE0D29;
+                          }
+
+                          .st81 {
+                            fill: #8ADF14;
+                          }
+
+                          .st82 {
+                            fill: #F0F0FF;
+                          }
+
+                          .st83 {
+                            opacity: 0.1;
+                          }
+
+                          .st84 {
+                            fill: #FFFFFF;
+                            stroke: #FFFFFF;
+                            stroke-width: 2.5;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st85 {
+                            clip-path: url(#SVGID_00000055673802522080120680000007993105136977853602_);
+                          }
+
+                          .st86 {
+                            opacity: 0.8;
+                          }
+
+                          .st87 {
+                            fill: #176EDE;
+                            stroke: #176EDE;
+                            stroke-width: 4;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st88 {
+                            opacity: 0.75;
+                            fill: #176EDE;
+                            stroke: #176EDE;
+                            stroke-width: 4;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st89 {
+                            opacity: 0.5;
+                            fill: #176EDE;
+                            stroke: #176EDE;
+                            stroke-width: 4;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st90 {
+                            opacity: 0.25;
+                            fill: #176EDE;
+                            stroke: #176EDE;
+                            stroke-width: 4;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st91 {
+                            opacity: 0.5;
+                          }
+
+                          .st92 {
+                            clip-path: url(#SVGID_00000043452855820517757040000012990343643416512924_);
+                          }
+
+                          .st93 {
+                            clip-path: url(#SVGID_00000164482561420394610560000009782593262331070338_);
+                          }
+
+                          .st94 {
+                            fill: #186EDF;
+                          }
+
+                          .st95 {
+                            fill: none;
+                            stroke: #FF4759;
+                            stroke-width: 1.0611;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st96 {
+                            fill: none;
+                            stroke: #FF4759;
+                            stroke-width: 1.0611;
+                            stroke-miterlimit: 10;
+                            stroke-dasharray: 4.0614, 4.0614;
+                          }
+
+                          .st97 {
+                            fill: none;
+                            stroke: #FF4759;
+                            stroke-width: 1.0611;
+                            stroke-miterlimit: 10;
+                            stroke-dasharray: 4.3672, 4.3672;
+                          }
+
+                          .st98 {
+                            fill: none;
+                            stroke: #FF4759;
+                            stroke-width: 1.0611;
+                            stroke-miterlimit: 10;
+                            stroke-dasharray: 4.1329, 4.1329;
+                          }
+
+                          .st99 {
+                            fill: none;
+                            stroke: #FFC801;
+                            stroke-miterlimit: 10;
+                            stroke-dasharray: 4;
+                          }
+
+                          .st100 {
+                            fill: none;
+                            stroke: #FFC801;
+                            stroke-width: 1.3872;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st101 {
+                            clip-path: url(#SVGID_00000029759151123704903200000002937710900064024765_);
+                          }
+
+                          .st102 {
+                            fill: none;
+                            stroke: #FF4759;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st103 {
+                            fill: none;
+                            stroke: #FF4759;
+                            stroke-miterlimit: 10;
+                            stroke-dasharray: 5.071, 5.071;
+                          }
+
+                          .st104 {
+                            fill: none;
+                            stroke: #FF4759;
+                            stroke-miterlimit: 10;
+                            stroke-dasharray: 3.7405, 3.7405;
+                          }
+
+                          .st105 {
+                            fill: none;
+                            stroke: #FF4759;
+                            stroke-miterlimit: 10;
+                            stroke-dasharray: 3.3959, 3.3959;
+                          }
+
+                          .st106 {
+                            clip-path: url(#SVGID_00000084530410745208576890000001879603645087056818_);
+                          }
+
+                          .st107 {
+                            fill: #4C326D;
+                          }
+
+                          .st108 {
+                            fill: #ADCFD8;
+                          }
+
+                          .st109 {
+                            fill: #DAEEF7;
+                          }
+
+                          .st110 {
+                            fill: #CC1D36;
+                          }
+
+                          .st111 {
+                            fill: #0D5DB5;
+                          }
+
+                          .st112 {
+                            opacity: 0.5;
+                            fill: #4C326D;
+                          }
+
+                          .st113 {
+                            fill: none;
+                            stroke: #FFC801;
+                            stroke-width: 2.9643;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st114 {
+                            clip-path: url(#SVGID_00000048495035124187521810000007170370817572568763_);
+                          }
+
+                          .st115 {
+                            fill: #324446;
+                          }
+
+                          .st116 {
+                            fill: #4E6566;
+                          }
+
+                          .st117 {
+                            opacity: 0.5;
+                            fill: #0B2025;
+                          }
+
+                          .st118 {
+                            filter: url(#Adobe_OpacityMaskFilter);
+                          }
+
+                          .st119 {
+                            fill: url(#SVGID_00000115483374547931732720000005551529482939616143_);
+                          }
+
+                          .st120 {
+                            opacity: 0.7;
+                            mask: url(#SVGID_00000113352809091069837000000012568426077299071378_);
+                            fill: #434343;
+                          }
+
+                          .st121 {
+                            opacity: 0;
+                            fill: #0B2025;
+                          }
+
+                          .st122 {
+                            opacity: 0.4;
+                            fill: #0B2025;
+                          }
+
+                          .st123 {
+                            fill: #E5AF03;
+                          }
+
+                          .st124 {
+                            fill: url(#SVGID_00000014627555880596479750000013146936752085227398_);
+                          }
+
+                          .st125 {
+                            fill: url(#SVGID_00000129887811415329512830000005552007578455234991_);
+                          }
+
+                          .st126 {
+                            fill: #AA160B;
+                          }
+
+                          .st127 {
+                            fill: #CCCACB;
+                          }
+
+                          .st128 {
+                            fill: #B5C0C9;
+                          }
+
+                          .st129 {
+                            opacity: 0.4;
+                            fill: #90A3AF;
+                          }
+
+                          .st130 {
+                            fill: #F8FFFF;
+                          }
+
+                          .st131 {
+                            opacity: 0.5;
+                            fill: #B3C0C6;
+                          }
+
+                          .st132 {
+                            opacity: 0.4;
+                            fill: #434343;
+                          }
+
+                          .st133 {
+                            fill: #E6E6E6;
+                          }
+
+                          .st134 {
+                            fill: #90A3AF;
+                          }
+
+                          .st135 {
+                            opacity: 0.5;
+                            fill: #D11C36;
+                          }
+
+                          .st136 {
+                            enable-background: new;
+                          }
+
+                          .st137 {
+                            fill: #D11C36;
+                          }
+
+                          .st138 {
+                            fill: #A80928;
+                          }
+
+                          .st139 {
+                            opacity: 0.6;
+                            fill: #28281E;
+                          }
+
+                          .st140 {
+                            fill: none;
+                            stroke: #FFC801;
+                            stroke-width: 2.3715;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st141 {
+                            clip-path: url(#SVGID_00000065796556991826145310000010676358874130631833_);
+                          }
+
+                          .st142 {
+                            fill: #FEC900;
+                          }
+
+                          .st143 {
+                            opacity: 0.75;
+                          }
+
+                          .st144 {
+                            fill: none;
+                            stroke: #176EDE;
+                            stroke-width: 5;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st145 {
+                            fill: none;
+                            stroke: #176EDE;
+                            stroke-width: 5;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          }
+
+                          .st146 {
+                            clip-path: url(#SVGID_00000111156271451675870300000017107607995408762511_);
+                          }
+                        </style>
+                        <g>
+                          <defs>
+                            <rect id="SVGID_00000098942748648667939150000013854699484900471974_" width="328"
+                              height="520" />
+                          </defs>
+                          <clipPath id="SVGID_00000158016771988098319080000011910222649759193005_">
+                            <use xlink:href="#SVGID_00000098942748648667939150000013854699484900471974_"
+                              style="overflow:visible;" />
+                          </clipPath>
+                          <g style="clip-path:url(#SVGID_00000158016771988098319080000011910222649759193005_);">
+                            <circle class="st41" cx="251" cy="190" r="150" />
+                            <circle class="st48" cx="80" cy="380" r="60" />
+                            <g>
+                              <g>
+                                <g>
+                                  <path class="st115" d="M207.8,226.8c0.2,5.3-40.3,34.2-81.1,34.5c-41.5,0.4-83.4-27.8-83.4-34.5v25c0,6.6,27.7,30.5,83.4,30.5
+						c52.9,0,81.3-25.2,81.1-30.5V226.8z" />
+                                  <g>
+                                    <path class="st115"
+                                      d="M207.8,226.9C207.8,226.9,207.8,226.9,207.8,226.9L207.8,226.9C207.8,226.9,207.8,226.9,207.8,226.9z" />
+                                    <path class="st116" d="M207.7,226c-1.4-16.3-37.6-29.4-82.2-29.4c-44.6,0-80.9,13.1-82.2,29.5c0,0.3,0,0.6,0,0.9
+							c0,16.6,36.2,34.1,81.2,34.3c0.4,0,0.7,0,1.1,0c0,0,0.1,0,0.1,0c0.3,0,0.7,0,1,0c0.2,0,0.4,0,0.6,0
+							c44.6-0.3,80.5-17.7,80.5-34.3v0C207.8,226.6,207.7,226.3,207.7,226z" />
+                                  </g>
+                                  <path class="st115" d="M203.5,157.2l-78,42.6l-78-42.6l0.2,68.4c0,6.3,24.3,29.6,78.9,29.6c58.7,0,76.9-24.6,76.8-29.6
+						L203.5,157.2z" />
+                                  <path class="st117" d="M47.6,210.9c0-8.6,13.2-9.2,31.2-1.1c30.1,13.5,64.6,45.4,89.5,40.2c23.4-6.7,33.1-18.1,34.7-23
+						c0.1-1.1,0.2-2,0.3-2.6l0.1-31.3c-1.1,0-31.8-1-62.1-2l-15.8,8.6l-17.9-9.8c-15.7-0.6-26.9-1.1-26.7-1.3
+						c0.7-0.7-31.4-5.9-31.4-5.9l-1.9,1.1L47.6,210.9z" />
+                                  <defs>
+                                    <filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="178.4"
+                                      y="191.7" width="25" height="55.6">
+                                      <feColorMatrix type="matrix"
+                                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
+                                    </filter>
+                                  </defs>
+                                  <mask maskUnits="userSpaceOnUse" x="178.4" y="191.7" width="25" height="55.6"
+                                    id="SVGID_1_">
+                                    <g class="st118">
+
+                                      <linearGradient id="SVGID_00000157267139391522648830000009624012194361888171_"
+                                        gradientUnits="userSpaceOnUse" x1="225.3597" y1="221.6253" x2="179.2888"
+                                        y2="221.6253">
+                                        <stop offset="0" style="stop-color:#FFFFFF" />
+                                        <stop offset="0.1137" style="stop-color:#DADADA" />
+                                        <stop offset="0.3617" style="stop-color:#8D8D8D" />
+                                        <stop offset="0.5833" style="stop-color:#515151" />
+                                        <stop offset="0.77" style="stop-color:#252525" />
+                                        <stop offset="0.9148" style="stop-color:#0A0A0A" />
+                                        <stop offset="1" style="stop-color:#000000" />
+                                      </linearGradient>
+
+                                      <rect x="124" y="156"
+                                        style="fill:url(#SVGID_00000157267139391522648830000009624012194361888171_);"
+                                        width="141.2" height="131.2" />
+                                    </g>
+                                  </mask>
+                                  <polygon style="opacity:0.7;mask:url(#SVGID_1_);fill:#434343;" points="203.4,216.9 203.4,191.7 178.4,202.5 179.7,247.3 
+						202,228.3 					" />
+                                  <path class="st121" d="M84.4,234.6c11.9,4.2,25.9,6.8,41.1,6.8c47.8,0,77.8-17.8,77.8-31.3l0.1-47.6l-78-7.8l-78,5.5l0.2,41.1
+						c0,11.2,12.3,23.3,31.5,31.3L84.4,234.6z" />
+                                  <polygon class="st115" points="210.3,156.3 125.4,118.1 41.3,156.3 1,164.2 1,172.5 1,172.5 125.4,227.7 251,172.5 251,172.5 
+						251,164.2 					" />
+                                  <polygon class="st116" points="125.4,107.7 1,164.2 125.4,219.4 251,164.2 					" />
+                                  <path class="st122" d="M127.2,157c0,0-56.6,16.8-65.2,32c-0.9,1.6-1.5,4.3-1.9,7.5l4.9,2.8c0,0,0.1-6.7,0.9-8.2
+						c8.6-15,66.1-32.3,66.1-32.3L127.2,157z" />
+                                  <path class="st117" d="M136.9,157.8c0,2.9-5,5.3-11.1,5.3c-6.1,0-11.1-2.4-11.1-5.3c0-2.9,4.9-5.3,11.1-5.3
+						C132,152.5,136.9,154.9,136.9,157.8z" />
+                                  <g>
+                                    <g>
+                                      <path class="st41" d="M58.8,217.4c-0.2-4.6-1-24.6,2.2-30.1c7.9-14,59-29.8,64.2-31.4l1.9,1.5c-9.6,2.9-55.8,17.4-63.7,31.3
+								c-3.1,5.5-2.1,24.2-1.9,28.4L58.8,217.4z" />
+                                    </g>
+                                    <path class="st123" d="M118,160.2l3.3-0.9c0,0-1.5-1.6-1.8-1.7c-0.2-0.1-1.4,0.5-1.4,0.5l-0.6,0.3
+							C118,158.2,118.7,160,118,160.2z" />
+                                  </g>
+                                  <g>
+                                    <path class="st115" d="M136.2,155.1c0,2.7-4.6,4.9-10.3,4.9c-5.7,0-10.3-2.2-10.3-4.9c0-2.7,4.6-4.9,10.3-4.9
+							C131.6,150.2,136.2,152.4,136.2,155.1z" />
+                                  </g>
+                                  <g>
+
+                                    <linearGradient id="SVGID_00000141420691982635141300000016437061585200101273_"
+                                      gradientUnits="userSpaceOnUse" x1="57.6882" y1="231.6918" x2="61.9901"
+                                      y2="231.6918">
+                                      <stop offset="0" style="stop-color:#FFC801" />
+                                      <stop offset="1" style="stop-color:#E5AF03" />
+                                    </linearGradient>
+
+                                    <rect x="57.7" y="224.8"
+                                      style="fill:url(#SVGID_00000141420691982635141300000016437061585200101273_);"
+                                      width="4.3" height="13.8" />
+                                  </g>
+                                  <g>
+
+                                    <linearGradient id="SVGID_00000056428559908534578450000009842999760547243911_"
+                                      gradientUnits="userSpaceOnUse" x1="841.2264" y1="1233.8771" x2="913.2966"
+                                      y2="1241.9153" gradientTransform="matrix(0.8894 0 0 0.8894 -725.1371 -847.9312)">
+                                      <stop offset="0" style="stop-color:#FFC801" />
+                                      <stop offset="0.4635" style="stop-color:#F1BA02" />
+                                      <stop offset="1" style="stop-color:#E5AF03" />
+                                    </linearGradient>
+                                    <path style="fill:url(#SVGID_00000056428559908534578450000009842999760547243911_);"
+                                      d="M74.6,273.3c0-1.8-1.6-16.3-4.4-29
+							c-2.2-9.9-4.6-19-10.7-19c-13.8,0-15.4,44.2-15.1,48c0.2,2.2,1.3,4.5,4.5,6.3c1,0.6,2.6,1,3.2,1.1c2,0.5,4.4,0.8,7.4,0.8
+							c1.4,0,2.7,0,3.9-0.2c1.5-0.3,2.3-0.3,3.1-0.5C72.8,279.4,74.6,275.8,74.6,273.3z" />
+                                    <path class="st41" d="M60.9,225.5c-0.4-0.1-0.8-0.2-1.3-0.2c-0.7,0.4-1.6,1-2.7,1.8c-9.1,6.1-11.6,37.4-11.6,49.2
+							c0.7,1.2,1.8,2.4,3.6,3.4c1,0.6,2.6,1,3.2,1.1c0.9,0.2,1.8,0.4,2.9,0.5c0.2-19.9,2.7-50.8,4.2-53.9
+							C59.1,227.3,60.2,226.4,60.9,225.5z" />
+                                    <path class="st123" d="M71.8,278.5c2.1-1.6,2.8-3.6,2.8-5.1c0-3.3-1.3-48-15.1-48c-1.9,0-3.6,0.8-5,2.3
+							c-0.8,1.1,6,1.6,8.1,4.7c5,7.5,9.2,21.5,9.2,45.8C71.8,278.3,71.8,278.4,71.8,278.5z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <path class="st126" d="M145.2,313.9c10.8,14.6,12.9,31.4,4.6,37.5c-8.3,6.2-23.8-0.7-34.6-15.2c-10.8-14.6-12.9-31.4-4.6-37.5
+						C118.9,292.5,134.4,299.4,145.2,313.9z" />
+                                  <g>
+                                    <path class="st127" d="M188.8,233.8L188.8,233.8c7.4-6,21.5-1.4,31.7,10.5c9.6,11.2,12.3,24.9,6.6,31.7L83.2,407l-38.5-42.4
+							L188.8,233.8z" />
+                                    <path class="st128" d="M51.1,396.9c-4.5-5.3-8.7-10.5-10-15.9c-0.5-2.1,4.3-4.6,3.4-6.3c-1.6-3.1-1.5-8.3,1.4-10.8
+							c7.3-6.3,21.6-1.6,31.8,10.4c10.2,12,12.6,26.8,5.3,33C75.5,413.5,61.3,408.9,51.1,396.9z" />
+                                    <g>
+                                      <path class="st129" d="M147.8,284.3L147.8,284.3c5-4.1,14.5-0.9,21.4,7.1c6.5,7.5,8.3,16.8,4.4,21.4l0.1,0.2L76.6,401
+								c0,0,5.1-9-4.6-20.6c-8.8-10.5-18.1-7.3-18.1-7.3L147.8,284.3z" />
+                                      <path class="st129" d="M69.8,378.9c-1.4-1.7-10.1,8.1-11.3,6.5c-4.7-6.3-6.5-9-2.6-12.3c4.9-4.2,9.2-0.8,16.1,7.3
+								c6.9,8.1,9.3,16.6,4.4,20.8c-2.1,1.8,2-1.7,1.9-5.7C78.1,390.3,73.8,383.5,69.8,378.9z" />
+                                    </g>
+                                    <path class="st130" d="M77.6,374.2c-10.2-12-24.5-16.6-31.8-10.4c-0.3,0.3-0.6,0.6-0.9,0.9l-0.2-0.2l144.1-130.7l0.1,0.1
+							c7.4-6.1,21.5-1.4,31.7,10.5c9.6,11.2,12.3,24.9,6.6,31.7L84.3,407.8l-1.1-0.8C90.1,400.5,87.7,386,77.6,374.2z" />
+                                    <path class="st131" d="M162.6,319.6c0-0.1,8.1,4.4,8.1,4.3l59.3-56.3c0.5-10.3-5.6-18.8-9.5-23.3c-0.8-0.9-1.5-1.7-2.3-2.5
+							l-58.7,52.4c0.3-1.3,0.5-2,0.8-3.3c-2,0.2-3,0.3-5,0.5c-0.1-1.3-0.1-1.9-0.2-3.2c-1.9,0.5-2.9,0.7-4.8,1.2
+							c-0.4-1.1-0.6-1.7-1.1-2.9c-1.7,0.7-2.6,1.1-4.3,1.8c-0.8-1-1.1-1.5-1.9-2.4c-1.5,0.9-2.3,1.3-3.8,2.2c-1-0.8-1.5-1.1-2.5-1.9
+							c-1.2,1-1.9,1.5-3.1,2.6c-1.2-0.5-1.8-0.8-3-1.4c-1,1.1-1.4,1.7-2.4,2.8c-1.4-0.3-2-0.5-3.4-0.8c-0.7,1.2-1,1.7-1.7,2.9
+							c-1.4-0.1-2.2-0.1-3.6-0.2c-0.4,1.2-0.5,1.7-0.9,2.9c-1.5,0.1-2.2,0.2-3.7,0.4c-0.1,1.1-0.1,1.7-0.1,2.8
+							c-1.5,0.4-2.2,0.5-3.7,0.9c0.2,1.1,0.4,1.6,0.6,2.7c-1.4,0.6-2.1,0.9-3.5,1.4c0.5,1,0.8,1.4,1.3,2.4c-1.3,0.8-2,1.2-3.2,1.9
+							c0.8,0.8,1.2,1.2,2,2c-1.2,1-1.8,1.5-2.9,2.4c1,0.7,1.6,1,2.7,1.5c-1,1.1-1.5,1.7-2.4,2.8c1.3,0.5,1.9,0.7,3.3,1
+							c-0.7,1.2-1.1,1.9-1.8,3.1c1.5,0.2,2.3,0.2,3.8,0.3c-0.5,1.4-0.7,2.1-1.2,3.4c1.6-0.1,2.5-0.2,4.2-0.3
+							c-0.2,1.4-0.3,2.2-0.5,3.6c1.7-0.4,2.6-0.5,4.3-0.9c0.1,1.5,0.2,2.2,0.3,3.7c0.8-0.3,1.5-0.5,2.1-0.8l-45.4,40.6l6.3,5.6
+							l6.4,23.3l71.3-64.9c0.6,0-2.1-8.3-1.3-8.3c0-0.6,0-1.2,0.1-1.7l4.5-4.1C162.3,319.6,162.4,319.6,162.6,319.6z" />
+                                    <path class="st132" d="M227.1,276c1.8-2.2,2.8-5.1,2.9-8.5l0,0l-57.3,54.3l-21.4,18.7l-61.5,56.1l-6.1,10.6l0.6,0.5L227.1,276
+							z" />
+                                    <g>
+                                      <path class="st133" d="M79.5,411.4c4.3-1.5,7.5-4.6,9.1-8.9c2.9-7.6,0.5-17.7-6.5-27c-12.8-17.3-25.8-19.1-33.6-15.1
+								c-2.9,1.5-4.7,3.6-5.5,6.4c-2,6.8,3.1,15.6,5.8,20.3l0.4,0.7c3.5,6.1,17.4,18,25.2,14.8c2.5-1,4.3-2.7,5.1-4.9
+								c1.8-4.8-1.4-10.8-3.1-14.1l-0.2-0.5c-2.3-4.4-13.5-15.6-20-12.4c-2,1-3.2,2.6-3.6,4.6c-0.7,4.1,2.3,9,4.5,11.3
+								c0.7,0.7,1.8,0.7,2.5,0.1c0.7-0.7,0.7-1.8,0.1-2.5c-1.7-1.8-4.1-5.6-3.6-8.2c0.2-0.9,0.7-1.6,1.7-2
+								c3.4-1.7,13.2,6.8,15.3,10.9l0.3,0.5c1.3,2.5,4.1,7.8,2.9,11.2c-0.5,1.3-1.5,2.2-3.1,2.8c-4.9,2-17.4-7.3-20.9-13.3l-0.4-0.7
+								c-2.5-4.3-7-12.2-5.4-17.5c0.5-1.8,1.8-3.2,3.8-4.2c6.3-3.2,17.6-1.4,29.2,14.1c6.2,8.4,8.5,17.2,6,23.6
+								c-1.5,3.9-4.6,6.5-8.8,7.3c-9.2,1.8-26.9-8.2-33.9-28.2c-0.3-0.9-1.3-1.4-2.2-1.1c-0.9,0.3-1.4,1.3-1.1,2.2
+								c7.7,22.1,27.3,32.6,37.9,30.5C78.1,411.9,78.8,411.7,79.5,411.4z" />
+                                    </g>
+                                    <path class="st134" d="M144.8,312.7c-8-9.3-18.1-14.8-26.3-15.1l-8.3,7.5c0.3-0.1,0.7-0.3,1.1-0.6c6.4-4.8,21.4,1.6,29.9,11.7
+							c9.7,11.3,13.1,24.5,6.8,32.8l7.4-6.9C156.9,333.8,153.1,322.5,144.8,312.7z" />
+                                  </g>
+                                  <path class="st126" d="M146.3,311.3c-11.7-13.7-27.9-19-36.3-12l-1.3,1.4l-1.1,2.4l0.4,1.1c2.2-1.9,2.3,0.9,4.8-0.9
+						c6.4-4.8,21.4,1.6,29.9,11.7c9.9,11.6,13.2,25.3,6.2,33.5c-0.6,0.8,1.2,2.2,0.6,2.9c0,0,0.5,0.1,0.7,0c1.4-1.1,3.7-3.6,3.7-3.6
+						C160.3,339.8,157.2,324.1,146.3,311.3z" />
+                                  <g>
+                                    <path class="st46" d="M162,297.2c-11.7-13.7-27.9-19-36.3-12l-0.1-0.1L110.2,299c8.6-6.4,24.5-1.1,36,12.3
+							c11,12.9,14.1,28.5,7.5,36.4l15.8-14.1C176,325.8,173,310.1,162,297.2z" />
+                                    <path class="st135" d="M162,297.2c-0.1-0.1-0.2-0.2-0.2-0.3c-3.4,0.1-7.2,0.3-7.4,0.6c-0.3,0.4-7.9,6.4-12,9.8
+							c1.3,1.2,2.6,2.6,3.8,4c6.6,7.7,10.4,16.5,10.9,23.9l15.8-14.6C172.2,313.4,168.5,304.8,162,297.2z" />
+                                  </g>
+                                  <g>
+                                    <g>
+                                      <g class="st136">
+                                        <g>
+                                          <polygon class="st123"
+                                            points="181.5,300.7 181,304 143.7,305.7 142.6,302.4 									" />
+                                        </g>
+                                        <g>
+                                          <polygon class="st41"
+                                            points="173.3,289.6 181.5,300.7 142.6,302.4 153.1,290.1 									" />
+                                        </g>
+                                      </g>
+                                      <g class="st136">
+                                        <g>
+                                          <polygon class="st123"
+                                            points="144.4,322.8 145.6,326.1 125.5,314.7 124.4,311.4 									" />
+                                        </g>
+                                        <g>
+                                          <polygon class="st123"
+                                            points="167.8,316.6 169,319.9 145.6,326.1 144.4,322.8 									" />
+                                        </g>
+                                        <g>
+                                          <polygon class="st41"
+                                            points="142.3,302.8 167.8,316.6 144.4,322.8 124.4,311.4 									" />
+                                        </g>
+                                      </g>
+                                      <polygon class="st123" points="148.6,318.7 149.7,315.9 153.9,315.4 154.1,312.8 158.3,311.7 158.2,311.4 142.3,302.8 
+								124.4,311.4 141.6,321.2 142.7,321.4 144.6,318.6 							" />
+                                    </g>
+                                    <g>
+                                      <g>
+                                        <polygon class="st137"
+                                          points="149.6,275.5 151.8,282 152.4,284.5 150.2,278 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="108,294.1 110.2,300.7 108.7,298.5 106.5,292 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="154.4,276.9 156.7,283.5 156.4,286.1 154.1,279.6 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="106.5,297.8 108.7,304.4 106.5,302.7 104.2,296.1 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="158.3,279.1 160.6,285.7 159.4,288.4 157.2,281.9 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="106.1,301.4 108.4,308 105.4,306.7 103.2,300.2 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="161.1,282 163.4,288.5 161.4,291.3 159.2,284.7 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="107,304.7 109.2,311.2 105.7,310.6 103.5,304 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="162.7,285.4 164.9,292 162.3,294.6 160,288 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="109,307.6 111.2,314.1 107.3,314 105,307.5 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="163,289.3 165.2,295.8 161.9,298.2 159.7,291.6 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="112,309.8 114.3,316.4 110.1,316.9 107.8,310.3 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="161.9,293.3 164.2,299.9 160.4,301.9 158.2,295.3 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="116,311.5 118.2,318 114,319.1 111.7,312.5 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st137"
+                                          points="159.7,297.5 161.9,304 157.8,305.6 155.6,299 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st137"
+                                          points="120.7,312.4 122.9,318.9 118.8,320.5 116.6,313.9 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="155.6,299 157.8,305.6 158.5,308 156.2,301.5 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st137"
+                                          points="156.2,301.5 158.5,308 154.2,309.1 152,302.5 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st137"
+                                          points="125.9,312.5 128.2,319 124.4,321.1 122.1,314.5 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="122.1,314.5 124.4,321.1 122.9,318.9 120.7,312.4 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="151.7,305.2 154,311.7 149.8,312.2 147.6,305.7 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st137"
+                                          points="152,302.5 154.2,309.1 154,311.7 151.7,305.2 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st137"
+                                          points="131.5,311.8 133.7,318.4 130.4,320.8 128.2,314.2 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="128.2,314.2 130.4,320.8 128.2,319 125.9,312.5 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="146.5,308.5 148.7,315 144.8,314.9 142.5,308.4 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st137"
+                                          points="147.6,305.7 149.8,312.2 148.7,315 146.5,308.5 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st137"
+                                          points="137.1,310.5 139.3,317 136.7,319.6 134.4,313.1 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="134.4,313.1 136.7,319.6 133.7,318.4 131.5,311.8 								" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st138"
+                                          points="140.6,311.1 142.9,317.7 139.3,317 137.1,310.5 								" />
+                                      </g>
+                                      <g>
+                                        <path class="st46" d="M155.6,299l0.6,2.5l-4.2,1l-0.2,2.7l-4.2,0.5l-1.1,2.8l-3.9-0.1l-1.9,2.8l-3.5-0.7l-2.7,2.6l-3-1.2
+									l-3.3,2.4l-2.3-1.7l-3.8,2l-1.5-2.1l-4.1,1.6l-0.6-2.5l-4.2,1l0.3-2.7l-4.2,0.5l1.1-2.8l-3.9-0.1l1.9-2.8l-3.5-0.7l2.7-2.6
+									l-3-1.2l3.3-2.4l-2.3-1.7l3.8-2l-1.5-2.1l4.1-1.6l-0.6-2.5l4.2-1l0.2-2.7l4.2-0.5l1.1-2.8l3.9,0.1l1.9-2.8l3.5,0.7l2.7-2.6
+									l3,1.2l3.3-2.4l2.3,1.7l3.8-2l1.5,2.1l4.1-1.6l0.6,2.5l4.2-1.1l-0.3,2.7l4.2-0.5l-1.1,2.8l3.9,0.1l-2,2.8l3.5,0.7L160,288
+									l3,1.2l-3.3,2.4l2.3,1.7l-3.8,2l1.5,2.1L155.6,299z M120.2,309.7" />
+                                      </g>
+                                      <g>
+                                        <polygon class="st137"
+                                          points="142.5,308.4 144.8,314.9 142.9,317.7 140.6,311.1 								" />
+                                      </g>
+                                    </g>
+                                  </g>
+                                  <g>
+                                    <g class="st91">
+                                      <path class="st137" d="M144.9,281c9.9,1.9,12.6,9.6,6.1,17.1c-6.5,7.6-19.8,12.2-29.6,10.3c-9.9-1.9-12.6-9.6-6.1-17.1
+								C121.7,283.7,135,279.1,144.9,281z" />
+                                    </g>
+                                    <path class="st41" d="M143.3,282.8c-8.6-1.6-20.1,2.4-25.7,9c-5.7,6.6-3.3,13.2,5.3,14.9c8.6,1.6,20.1-2.4,25.7-9
+							C154.2,291.1,151.9,284.4,143.3,282.8z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <path class="st41" d="M67.3,220.8c0,4.1-3.3,7.4-7.4,7.4c-4.1,0-7.4-3.3-7.4-7.4c0-4.1,3.3-7.4,7.4-7.4
+						C63.9,213.4,67.3,216.7,67.3,220.8z" />
+                                </g>
+                                <path class="st123"
+                                  d="M62.5,213.9c1.3,1.3,2.1,3.1,2.1,5.1c0,4.1-3.3,7.4-7.4,7.4c-1,0-1.9-0.2-2.7-0.5
+					c0.2,0.2,0.5,0.5,0.8,0.7c1.3,1,2.8,3,4.6,3c4.2,0,2.7-1.9,3.8-2.5c2.1-1.3,3.6-3.7,3.6-6.3C67.3,217.7,65.3,215,62.5,213.9z" />
+                                <polygon class="st139" points="125.4,227.7 125.4,219.4 251,164.2 251,172.5 				" />
+                              </g>
+                            </g>
+                            <g>
+                              <polygon class="st45" points="274.3,466.9 274.3,411.9 229.5,439.4 			" />
+                              <polygon class="st78" points="254.6,466.9 254.6,411.9 209.7,439.4 			" />
+                            </g>
+                            <g>
+                              <polygon class="st48" points="39.8,60 59.7,40 39.8,20 20,40 			" />
+                              <polygon class="st140" points="55,60 74.9,40 55,20 35.2,40 			" />
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="details-container">
+                      <div class="basic-job-details">
+                        <div class="job-image">
+                          <span class="image"></span>
+                        </div>
+                        <h2 class="job-profile">
+                          <%= aboutJob.basicDetails.jobTitle%>
+                        </h2>
+                        <p class="company-name">
+                          <%= aboutJob.basicDetails.organisation %>
+                        </p>
+                        <div class="job-datetime">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                            <title>Calendar</title>
+                            <rect fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" x="48"
+                              y="80" width="416" height="384" rx="48" />
+                            <circle cx="296" cy="232" r="24" />
+                            <circle cx="376" cy="232" r="24" />
+                            <circle cx="296" cy="312" r="24" />
+                            <circle cx="376" cy="312" r="24" />
+                            <circle cx="136" cy="312" r="24" />
+                            <circle cx="216" cy="312" r="24" />
+                            <circle cx="136" cy="392" r="24" />
+                            <circle cx="216" cy="392" r="24" />
+                            <circle cx="296" cy="392" r="24" />
+                            <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"
+                              stroke-linecap="round" d="M128 48v32M384 48v32" />
+                            <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"
+                              d="M464 160H48" />
+                          </svg>
+                          <p>
+                            <%= formatDate(aboutJob.basicDetails.startDateTime) %> - <%=
+                                formatDate(aboutJob.basicDetails.endDateTime) %>
+                          </p>
+                        </div>
+                        <div class="extra-details">
+                          <div class="location">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt"
+                              class="svg-inline--fa fa-map-marker-alt fa-w-12" role="img"
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                              <path fill="currentColor"
+                                d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z">
+                              </path>
+                            </svg>
+                            <p><span style="font-weight: 600;">Location: </span>Remote</p>
+                          </div>
+                          <div class="website">
+                            <a target="_blank" href="<%= aboutJob.basicDetails.website %>">Website</a>
+                          </div>
+                        </div>
+                      </div>
+                      <% if (!isRegistered) { %>
+                        <form class="mark-complete">
+                          <button id="mark-as-registered" type="submit">Mark as Registered</button>
+                        </form>
+                        <% } %>
+                          <div class="job-highlight">
+                            <div class="deadline">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                                <title>Alarm</title>
+                                <path
+                                  d="M416.07 272a160 160 0 10-160 160 160 160 0 00160-160zM142.12 91.21A46.67 46.67 0 00112 80l-2.79.08C83.66 81.62 64 104 64.07 131c0 13.21 4.66 19.37 10.88 27.23a4.55 4.55 0 003.24 1.77h.88a3.23 3.23 0 002.54-1.31L142.38 99a5.38 5.38 0 001.55-4 5.26 5.26 0 00-1.81-3.79zM369.88 91.21A46.67 46.67 0 01400 80l2.79.08C428.34 81.62 448 104 447.93 131c0 13.21-4.66 19.37-10.88 27.23a4.55 4.55 0 01-3.24 1.76h-.88a3.23 3.23 0 01-2.54-1.31L369.62 99a5.38 5.38 0 01-1.55-4 5.26 5.26 0 011.81-3.79z"
+                                  fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="42" />
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                  stroke-width="38" d="M256.07 160v112h-80M416.07 432l-40-40M96.07 432l40-40" />
+                              </svg>
+                              <div class="details">
+                                <p class="title">Application Deadline:</p>
+                                <p class="text">
+                                  <%= formatDate(aboutJob.eligibilityDetails.regEndDateTime) %>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="end-time">
+                              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="history"
+                                class="svg-inline--fa fa-history fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path fill="currentColor" stroke-width="32"
+                                  d="M504 255.531c.253 136.64-111.18 248.372-247.82 248.468-59.015.042-113.223-20.53-155.822-54.911-11.077-8.94-11.905-25.541-1.839-35.607l11.267-11.267c8.609-8.609 22.353-9.551 31.891-1.984C173.062 425.135 212.781 440 256 440c101.705 0 184-82.311 184-184 0-101.705-82.311-184-184-184-48.814 0-93.149 18.969-126.068 49.932l50.754 50.754c10.08 10.08 2.941 27.314-11.313 27.314H24c-8.837 0-16-7.163-16-16V38.627c0-14.254 17.234-21.393 27.314-11.314l49.372 49.372C129.209 34.136 189.552 8 256 8c136.81 0 247.747 110.78 248 247.531zm-180.912 78.784l9.823-12.63c8.138-10.463 6.253-25.542-4.21-33.679L288 256.349V152c0-13.255-10.745-24-24-24h-16c-13.255 0-24 10.745-24 24v135.651l65.409 50.874c10.463 8.137 25.541 6.253 33.679-4.21z">
+                                </path>
+                              </svg>
+                              <p>
+                                <% const postDate=Math.floor(daysBetween(Date.now(),
+                                  aboutJob.eligibilityDetails.regEndDateTime)); %>
+                                  <%= postDate <=1 ? "1 day left" : `${postDate} days left` %>
+                              </p>
+                            </div>
+                            <% if (isRegistered) { %>
+                              <a id="apply-now-btn">Registered</a>
+                              <% } else { %>
+                                <% if(aboutJob.eligibilityDetails.regMode==="email" ) { %>
+                                  <a href="mailto: <%= aboutJob.eligibilityDetails.regAction %>" target="_blank"
+                                    id="apply-now-btn">Apply
+                                    Now</a>
+                                  <% } else { %>
+                                    <a href="<%= aboutJob.eligibilityDetails.regAction %>" target="_blank"
+                                      id="apply-now-btn">Apply
+                                      Now</a>
+                                    <% } } %>
+                          </div>
+                    </div>
+                    <div class="divider">
+                      <span class="visible"></span>
+                      <span class="invisible"></span>
+                      <span class="visible"></span>
+                    </div>
+                    <div class="additional-details">
+                      <div class="eligibility">
+                        <span class="head">
+                          <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="id-badge"
+                            class="svg-inline--fa fa-id-badge fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 384 512">
+                            <path fill="currentColor"
+                              d="M336 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm0 464H48V48h288v416zM144 112h96c8.8 0 16-7.2 16-16s-7.2-16-16-16h-96c-8.8 0-16 7.2-16 16s7.2 16 16 16zm48 176c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6-10.8 0-18.7 8-44.8 8-26.9 0-33.4-8-44.8-8-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z">
+                            </path>
+                          </svg>
+                          Eligibility:
+                        </span>
+                        <% aboutJob.eligibilityDetails.eligibility.forEach(t=> { %>
+                          <p class="tile">
+                            <%= t %>
+                          </p>
+                          <% }); %>
+                      </div>
+                      <div class="domains">
+                        <% aboutJob.basicDetails.jobDomains.forEach(c=> { %>
+                          <p class="chip">
+                            <%= c %>
+                          </p>
+                          <% }); %>
+                      </div>
+                    </div>
+                  </section>
+
+                </main>
+                <% if (!isRegistered) { %>
+                  <script src="/js/dashboard/registerJob.js"></script>
+                  <% } %>

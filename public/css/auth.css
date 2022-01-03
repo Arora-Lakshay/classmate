@@ -1,0 +1,288 @@
+.auth {
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: #FAFCFF;
+}
+.auth .ui-wrapper {
+  position: absolute;
+}
+.auth .ui-wrapper.top-left {
+  top: 0;
+  left: 0;
+}
+.auth .ui-wrapper.bottom-center {
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-60%) scale(0.8);
+}
+.auth .overlay {
+  display: grid;
+  position: relative;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-template-areas: "auth ui";
+}
+.auth .overlay .content {
+  position: relative;
+  grid-area: auth;
+  width: 100%;
+  height: 100%;
+  padding-top: 25px;
+}
+.auth .overlay .content .wrapper {
+  flex: 1;
+  height: auto;
+  z-index: 10;
+  padding: 24px 50px;
+  display: flex;
+  border: none;
+  margin-left: 45px;
+  flex-direction: column;
+  border-radius: 32px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background: #FAFCFF;
+}
+.auth .overlay .content .wrapper .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.auth .overlay .content .wrapper .header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+.auth .overlay .content .wrapper .header p {
+  color: #656F7C;
+  margin-top: 0.67em;
+  font-size: 0.9em;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+.auth .overlay .content .wrapper .half-container {
+  margin-bottom: 28px;
+}
+.auth .overlay .content .wrapper .half-container .button.special {
+  display: flex;
+  align-items: center;
+  padding: 0.8em 1.5em;
+  justify-content: space-around;
+  border-radius: 12px;
+  font-size: 0.75em;
+  border: 1px solid #e1e6ef;
+  background: #FAFCFF;
+}
+.auth .overlay .content .wrapper .half-container .button.special:focus {
+  outline: 0;
+  box-shadow: 0px 0px 0px 5px #e1e6ef;
+}
+.auth .overlay .content .wrapper .half-container .button.special .icon {
+  font-weight: bold;
+  color: #0a62ff;
+  font-family: sans-serif;
+}
+.auth .overlay .content .wrapper .divider-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.auth .overlay .content .wrapper .divider-wrap span {
+  color: #656F7C;
+  opacity: 0.8;
+  text-transform: capitalize;
+}
+.auth .overlay .content .wrapper .divider-wrap .divider {
+  display: block;
+  flex: 1;
+  height: 1px;
+  margin: 0px 4px;
+  background-color: #656F7C;
+  opacity: 0.35;
+}
+.auth .overlay .content .wrapper form {
+  margin-bottom: 35px;
+}
+.auth .overlay .content .wrapper form .half-container {
+  margin: 0;
+}
+.auth .overlay .content .wrapper form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+.auth .overlay .content .wrapper form fieldset legend {
+  margin-bottom: 0.8em;
+  color: #656F7C;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin-left: 1.15em;
+}
+.auth .overlay .content .wrapper form fieldset .tooltip span {
+  display: inline-flex;
+  width: 16px;
+  padding: 0.1em;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 12px;
+  top: -24px;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: #656F7C;
+  border: 1px solid #656F7C;
+  border-radius: 50px;
+}
+.auth .overlay .content .wrapper form fieldset .tooltip span:hover p {
+  display: block;
+  opacity: 1;
+}
+.auth .overlay .content .wrapper form fieldset .tooltip p {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  color: #FAFCFF;
+  background: #323e53;
+  max-width: 225px;
+  min-width: 200px;
+  font-size: 0.75em;
+  font-weight: 500;
+  padding: 1em;
+  line-height: 1.5em;
+  border: none;
+  border-radius: 6px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+}
+.auth .overlay .content .wrapper form fieldset .input {
+  width: 100%;
+  background: #FAFCFF;
+  border: 1px solid #e1e6ef;
+  border-radius: 12px;
+  padding-right: 0.5em;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  transition: border 100ms ease;
+  /* Firefox */
+}
+.auth .overlay .content .wrapper form fieldset .input:focus, .auth .overlay .content .wrapper form fieldset .input:active, .auth .overlay .content .wrapper form fieldset .input:focus-visible, .auth .overlay .content .wrapper form fieldset .input:focus-within {
+  border: 1px solid #0a62ff;
+}
+.auth .overlay .content .wrapper form fieldset .input input {
+  flex: 1;
+  outline: 0;
+  height: 100%;
+  border: none;
+  padding: 1.15em;
+  color: #656F7C;
+  font-weight: 500;
+  font-size: 0.825em;
+  background: transparent;
+  border-radius: 12px;
+  caret-color: #0a62ff;
+}
+.auth .overlay .content .wrapper form fieldset .input input:focus {
+  outline: 0;
+}
+.auth .overlay .content .wrapper form fieldset .input input::-webkit-outer-spin-button,
+.auth .overlay .content .wrapper form fieldset .input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.auth .overlay .content .wrapper form fieldset .input input[type=number] {
+  -moz-appearance: textfield;
+}
+.auth .overlay .content .wrapper form fieldset .input button.toggle {
+  background: transparent;
+  color: #0a62ff;
+  border: none;
+  padding: 0.3em 0.5em;
+  font-size: 0.85em;
+  font-weight: 500;
+  cursor: pointer;
+}
+.auth .overlay .content .wrapper form fieldset .input span {
+  background: #EFF3F8;
+  color: #0a62ff;
+  border-radius: 6px;
+  padding: 0.3em 0.5em;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+.auth .overlay .content .wrapper form .terms {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+  color: #656F7C;
+  font-size: 0.8em;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+.auth .overlay .content .wrapper form .terms input {
+  font-size: 1em;
+  background: #FAFCFF;
+  margin-right: 20px;
+}
+.auth .overlay .content .wrapper form button.submit {
+  border: none;
+  border-radius: 12px;
+  padding: 1.5em;
+  font-size: 0.8em;
+  font-weight: 500;
+  color: #FAFCFF;
+  width: 250px;
+  background: #0a62ff;
+  box-shadow: 0px 0px 15px -1px rgba(10, 100, 255, 0.55);
+}
+.auth .overlay .content .wrapper form button.submit:hover {
+  opacity: 0.75;
+}
+.auth .overlay .content .wrapper form button.submit:disabled {
+  opacity: 0.3;
+  box-shadow: none;
+  cursor: auto;
+}
+.auth .overlay .content .wrapper form button.submit:focus {
+  outline: 0;
+  box-shadow: 0px 0px 0px 5px rgba(10, 100, 255, 0.55);
+}
+.auth .overlay .content .wrapper .footer {
+  font-size: 0.8em;
+  font-weight: 500;
+  color: #656F7C;
+}
+.auth .overlay .content .wrapper .footer a {
+  text-decoration: none;
+  color: #0a62ff;
+  font-weight: bold;
+}
+.auth .overlay .content .wrapper .footer a:hover {
+  opacity: 0.7;
+}
+.auth .overlay .auth-ui {
+  grid-area: ui;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.auth .overlay .auth-ui svg {
+  height: auto;
+  width: 90%;
+}
+.auth .overlay .half-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 47% 47%;
+  -moz-column-gap: 6%;
+       column-gap: 6%;
+}

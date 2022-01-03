@@ -1,0 +1,254 @@
+.page {
+  display: grid;
+  grid-template-columns: 19% 81%;
+  background: #FAFCFF;
+}
+.page header {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 0px;
+  padding-top: 20px;
+  border-right: 1px solid #e1e6ef;
+}
+.page header .logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-top: 8px;
+  padding-left: 34px;
+  justify-content: flex-start;
+  background: transparent;
+}
+.page header .logo .button#logo {
+  font-family: "Montserrat", sans-serif;
+  color: #0d2551;
+  font-weight: 800;
+  font-size: 1.75em;
+  background: transparent;
+  border: none;
+  padding: 0;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.page header .logo .button#logo span.mark {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: #f64f3c;
+  margin-left: -5px;
+  border-radius: 50%;
+}
+.page header .logo .button#logo:hover {
+  opacity: 0.7;
+}
+.page header .logo .button#logo:focus, .page header .logo .button#logo:active {
+  outline: 0;
+}
+.page header .profile {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
+  padding-left: 34px;
+  align-items: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+.page header .profile .avatar {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 0.3em;
+  padding-top: 0.75em;
+  background: #54C6AA;
+  box-shadow: #1f1b66a4 1px 1px 4px 0px inset;
+  margin-right: 16px;
+}
+.page header .profile .avatar.student {
+  background: #433CE4;
+}
+.page header .profile .avatar svg {
+  width: auto;
+  height: 100%;
+}
+.page header .profile .details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.page header .profile .details .username {
+  display: flex;
+  width: 100%;
+  height: 22px;
+  padding-left: 4px;
+  margin-bottom: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.page header .profile .details .username p {
+  padding: 0;
+  margin: 0;
+  color: #0d2551;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+.page header .profile .details .annotation {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+.page header .profile .details .annotation span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.615em;
+  font-weight: 500;
+  height: 18px;
+  padding: 0.25em 1.65em 0.25em;
+  border-radius: 50px;
+}
+.page header .profile .details .annotation span.student {
+  color: #005500;
+  border: 1px solid #005500;
+  background: rgba(85, 255, 85, 0.75);
+}
+.page header .profile .details .annotation span.co-ordinator {
+  color: #ff6600;
+  border: 1px solid #ff6600;
+  background: #ffec82;
+}
+.page header .profile .details .annotation span.administrator {
+  color: #f55054;
+  border: 1px solid #f55054;
+  background: #fdeeed;
+}
+.page header .navbar {
+  flex: 1;
+  border: none;
+  margin-bottom: 24px;
+  width: 100%;
+  max-height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+.page header .navbar button.navitem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 34px;
+  border: none;
+  padding: 0px;
+  padding-left: 34px;
+  padding-right: 34px;
+  cursor: pointer;
+  background: transparent;
+  font-size: 0.975em;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  transition: all 100ms ease;
+  color: #656F7C;
+  border-right: 4px solid transparent;
+  position: relative;
+}
+.page header .navbar button.navitem.noty-updates {
+  height: 34px;
+  color: #444;
+  font-weight: 700;
+  transition: all 200ms ease;
+  position: relative;
+}
+.page header .navbar button.navitem.noty-updates:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 13px;
+  border-radius: 50%;
+  background: #444;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.page header .navbar button.navitem span.icon, .page header .navbar button.navitem span.text {
+  display: block;
+}
+.page header .navbar button.navitem span.icon svg {
+  width: auto;
+  height: 1em;
+  fill: #656F7C;
+}
+.page header .navbar button.navitem span.icon svg.ionicon {
+  height: 1.15em;
+}
+.page header .navbar button.navitem:hover {
+  color: #0d2551;
+}
+.page header .navbar button.navitem:hover span.icon svg {
+  fill: #0d2551;
+}
+.page header .navbar button.navitem:focus, .page header .navbar button.navitem:active {
+  outline: 0;
+}
+.page header .navbar .menu {
+  width: 100%;
+}
+.page header .navbar .menu ul {
+  padding: 14px 0px;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+.page header .navbar .menu ul li {
+  width: 100%;
+  margin: 10px auto;
+}
+.page header .navbar .menu ul li button.active {
+  border-right: 4px solid #f64f3c;
+  color: #f64f3c;
+}
+.page header .navbar .menu ul li button.active span.icon svg {
+  fill: #f64f3c;
+}
+.page header .navbar .options {
+  width: 100%;
+  border: none;
+}
+.page main {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+  position: relative;
+  padding: 0px;
+  padding-right: 2px;
+}
+.page main .main-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 12px 48px 28px 48px;
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}

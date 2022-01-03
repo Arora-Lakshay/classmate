@@ -1,0 +1,151 @@
+@import '../../variables.scss';
+
+.create-job main .form-area {
+  
+  .form-container {
+    position: relative;
+
+    .step-count {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      
+      span.count {
+        font-size: 0.875em;
+        color: $primary-color;
+        font-weight: 600;
+      }
+      
+      span.draft-status {
+        font-size: 0.775em;
+        font-style: italic;
+        font-weight: 700;
+        border-radius: 50px;
+        padding: 4px 14px;
+        opacity: 0.8;
+        visibility: hidden;
+
+        &.saving {
+          visibility: visible;
+          color: rgb(255, 102, 0);
+          border: 1px solid rgb(255, 102, 0);
+          background: rgb(255, 236, 130);
+        }
+
+        &.saved {
+          visibility: visible;
+          color: rgb(0, 85, 0);
+          border: 1px solid rgb(0, 85, 0);
+          background: rgba(85, 255, 85, 0.75);
+        }
+      }
+    }
+
+    .step-header {
+      width: 100%;
+      margin-bottom: 35px;
+
+      .title {
+        font-size: 1.65em;
+        font-weight: 700;
+        color: $primary-color;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    .note {
+      width: 100%;
+      margin-bottom: 35px;
+      padding-right: 1em;
+      
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 0.85em;
+        font-weight: 600;
+        color: $font-color;
+        line-height: 1.75em;
+      }
+    }
+
+    form  {
+      margin-bottom: 35px;
+      margin-top: 35px;
+
+      fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 52px;
+        position: relative;
+
+        legend {
+          margin-bottom: 0.8em;
+          color: $primary-color;
+          font-size: 0.85em;
+          font-weight: 600;
+          margin-left: 1.15em;
+          opacity: 0.9;
+        }
+
+        .input {
+          width: 100%;
+          height: 300px;
+          background: $input-bg;
+          border: 1px solid $primary-border;
+          border-radius: 12px;
+          padding: 0.84em;
+          display: flex;
+          align-items: center;
+          flex-wrap: nowrap;
+          transition: all 100ms ease;
+          max-height: 250px;
+          max-width: 800px;
+          overflow: hidden;
+
+          &.correct {
+            border-color: #40B995;
+          }
+
+          &.incorrect {
+            border-color: $mark;
+          }
+
+          &:focus, &:active, &:focus-visible, &:focus-within {
+            border: 1px solid $primary-bg;
+            background: #f2f6ff;
+          }
+          
+          textarea {
+            flex: 1;
+            outline: 0;
+            height: 100%;
+            border: none;
+            color: $font-color;
+            font-weight: 500;
+            font-size: 0.85em;
+            background: transparent;
+            border-radius: 12px;
+            caret-color: $primary-bg;
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-height: 250px;
+            resize: none;
+            &:focus {
+              outline: 0;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  .back-forth-container {
+    justify-content: flex-end;
+  }
+  
+}

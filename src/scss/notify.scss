@@ -1,0 +1,122 @@
+@import './variables.scss';
+
+.notifyjs-container {
+	z-index:100;
+	position:fixed;
+	top:1.5em;
+	right:.5em;
+	max-width: 500px;
+	width: max-content;
+	transition: all 500ms ease;
+}
+
+.notifyjs-container .notifyjs-notification {
+	font-size: medium;
+	display: none;
+	align-items: center;
+	justify-content: space-around;
+	position: relative;
+	padding: 0.52em 2em 0.52em 0.65em;
+	margin-bottom: 0.5em;
+	width:100%;
+	box-sizing:border-box;
+	border:none;
+	border-radius: 12px;
+	background: #ffffff;
+	box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+
+	.notifyjs-icon {
+		max-width: 34px;
+		height: 100%;
+		margin-right: 16px;
+
+		svg {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.notifyjs-message {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		font-family: $primary-font;
+		justify-content: space-around;
+		height: $alert-height;
+		flex-wrap: nowrap;
+		
+		.header {
+			font-size: 1.25em;
+			font-weight: 600;
+			color: #282C36;
+			padding: 0;
+			margin: 0;
+		}
+
+		.message {
+			font-size: 1.05em;
+			font-weight: 500;
+			color: #707070;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		width: 6px;
+		height: $alert-height;
+		border-radius: 50px;
+		background: #ffffff;
+		margin-right: 12px;
+	}
+
+	&.alert-success::before {
+		background: #21A67A;
+	}
+
+	&.alert-danger::before {
+		background: #F0A92E;
+	}
+
+	&.alert-info::before {
+		background: #007BC2;
+	}
+
+	&.alert-success .notifyjs-icon svg {
+		fill: #21A67A;
+	}
+
+	&.alert-danger .notifyjs-icon svg {
+		fill: #F0A92E;
+	}
+
+	&.alert-info .notifyjs-icon svg {
+		fill: #007BC2;
+	}
+}
+
+.slideIn {
+	animation: slideInRight 500ms forwards;
+}
+
+@media(max-width: 576px) {
+	.notifyjs-container .notifyjs-notification {
+		font-size: small;
+	}
+}
+
+@keyframes slideInRight {
+	0% {
+		-webkit-transform: translate3d(100%,0,0);
+		transform: translate3d(100%,0,0);
+		visibility: visible;
+	}
+	
+	100% {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+	}
+}

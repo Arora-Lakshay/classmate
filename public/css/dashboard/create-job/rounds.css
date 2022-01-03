@@ -1,0 +1,207 @@
+.create-job main .form-area .form-container {
+  position: relative;
+}
+.create-job main .form-area .form-container .step-count {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.create-job main .form-area .form-container .step-count span.count {
+  font-size: 0.875em;
+  color: #0d2551;
+  font-weight: 600;
+}
+.create-job main .form-area .form-container .step-count span.draft-status {
+  font-size: 0.775em;
+  font-style: italic;
+  font-weight: 700;
+  border-radius: 50px;
+  padding: 4px 14px;
+  opacity: 0.8;
+  visibility: hidden;
+}
+.create-job main .form-area .form-container .step-count span.draft-status.saving {
+  visibility: visible;
+  color: #ff6600;
+  border: 1px solid #ff6600;
+  background: #ffec82;
+}
+.create-job main .form-area .form-container .step-count span.draft-status.saved {
+  visibility: visible;
+  color: #005500;
+  border: 1px solid #005500;
+  background: rgba(85, 255, 85, 0.75);
+}
+.create-job main .form-area .form-container .step-header {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.create-job main .form-area .form-container .step-header .title {
+  font-size: 1.65em;
+  font-weight: 700;
+  color: #0d2551;
+  padding: 0;
+  margin: 0;
+}
+.create-job main .form-area .form-container .add-rounds {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #e1e6ef;
+  border-radius: 16px;
+  padding: 1em;
+  background: #FAFCFF;
+}
+.create-job main .form-area .form-container .add-rounds p.info-text {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #656F7C;
+  margin-right: 50px;
+  line-height: 1.5em;
+}
+.create-job main .form-area .form-container .add-rounds button#add-new-round {
+  background: #0a62ff;
+  color: #FAFCFF;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  width: 200px;
+  cursor: pointer;
+  border: none;
+  border-radius: 16px;
+  height: 45px;
+}
+.create-job main .form-area .form-container .add-rounds button#add-new-round:hover {
+  opacity: 0.8;
+}
+.create-job main .form-area .form-container .add-rounds button#add-new-round:focus, .create-job main .form-area .form-container .add-rounds button#add-new-round:active {
+  outline: 0;
+}
+.create-job main .form-area .form-container form {
+  margin-bottom: 35px;
+  margin-top: 35px;
+}
+.create-job main .form-area .form-container form .round-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 0px 1.5em;
+  margin-bottom: 50px;
+}
+.create-job main .form-area .form-container form .round-container p.round-count {
+  font-size: 1.25em;
+  font-weight: 700;
+  border-bottom: 1px solid #e1e6ef;
+  padding-bottom: 16px;
+  margin-bottom: 35px;
+}
+.create-job main .form-area .form-container form .round-container fieldset {
+  border: none;
+  padding: 0em 1.5em;
+  margin: 0;
+  margin-bottom: 52px;
+  position: relative;
+}
+.create-job main .form-area .form-container form .round-container fieldset legend {
+  margin-bottom: 0.8em;
+  color: #0d2551;
+  font-size: 0.85em;
+  font-weight: 600;
+  margin-left: 1.15em;
+  opacity: 0.9;
+}
+.create-job main .form-area .form-container form .round-container fieldset .tooltip {
+  z-index: 99;
+}
+.create-job main .form-area .form-container form .round-container fieldset .tooltip span {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  padding: 0.1em;
+  padding-top: 0.2em;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 12px;
+  top: -24px;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: #656F7C;
+  border: 1px solid #656F7C;
+  border-radius: 50px;
+  transition: all 200ms ease;
+}
+.create-job main .form-area .form-container form .round-container fieldset .tooltip span:hover p {
+  display: block;
+  opacity: 1;
+}
+.create-job main .form-area .form-container form .round-container fieldset .tooltip p {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  color: #FAFCFF;
+  background: #323e53;
+  max-width: 225px;
+  min-width: 200px;
+  font-size: 0.825em;
+  font-weight: 500;
+  padding: 1em;
+  line-height: 1.5em;
+  border: none;
+  border-radius: 6px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+}
+.create-job main .form-area .form-container form .round-container fieldset .input {
+  width: 100%;
+  background: #FAFCFF;
+  border: 1px solid #e1e6ef;
+  border-radius: 12px;
+  padding-right: 0.5em;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  transition: all 100ms ease;
+  /* Firefox */
+}
+.create-job main .form-area .form-container form .round-container fieldset .input.correct {
+  border-color: #40B995;
+}
+.create-job main .form-area .form-container form .round-container fieldset .input.incorrect {
+  border-color: #f64f3c;
+}
+.create-job main .form-area .form-container form .round-container fieldset .input:focus, .create-job main .form-area .form-container form .round-container fieldset .input:active, .create-job main .form-area .form-container form .round-container fieldset .input:focus-visible, .create-job main .form-area .form-container form .round-container fieldset .input:focus-within {
+  border: 1px solid #0a62ff;
+  background: #f2f6ff;
+}
+.create-job main .form-area .form-container form .round-container fieldset .input input {
+  flex: 1;
+  outline: 0;
+  height: 100%;
+  border: none;
+  padding: 1.15em;
+  color: #656F7C;
+  font-weight: 500;
+  font-size: 0.825em;
+  background: transparent;
+  border-radius: 12px;
+  caret-color: #0a62ff;
+}
+.create-job main .form-area .form-container form .round-container fieldset .input input:focus {
+  outline: 0;
+}
+.create-job main .form-area .form-container form .round-container fieldset .input input::-webkit-outer-spin-button,
+.create-job main .form-area .form-container form .round-container fieldset .input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.create-job main .form-area .form-container form .round-container fieldset .input input[type=number] {
+  -moz-appearance: textfield;
+}
+.create-job main .form-area .back-forth-container {
+  justify-content: flex-end;
+}
