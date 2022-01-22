@@ -4,6 +4,7 @@ const createHttpError = require("http-errors");
 const { basicDetailsSchema, regEligSchema, roundsSchema, jobDescriptionSchema, stipendSalarySchema, addDetailsSchema } = require("../helpers/validation.schema");
 const Job = require("../models/Job.model");
 const Draft = require("../models/Draft.model");
+const User = require("../models/User.model");
 
 
 exports.discardDraft = async (req, res, next) => {
@@ -74,6 +75,9 @@ exports.saveDraft = async (req, res, next) => {
 
 exports.registerJob = async (req, res, next) => {
   try {
+
+    const user = await User.findById(req.payload.aud);
+    req.currentUser = user;
 
     if (!req.currentUser) {
       throw createHttpError.NotFound("User does not exist");
