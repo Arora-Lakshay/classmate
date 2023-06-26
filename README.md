@@ -4,10 +4,10 @@
 1. Home Page
 ![Home](https://github.com/Lakshayar0ra/classmate/blob/master/pages/Home.png)
 
-2. Student Dashboard Page
+2. Recruiter Dashboard Page
 ![Dashboard - C](https://github.com/Lakshayar0ra/classmate/blob/master/pages/Dashboard%20-%20C.png)
 
-3. Recruiter Dashboard Page
+3. Student Dashboard Page
 ![Dashboard - S](https://github.com/Lakshayar0ra/classmate/blob/master/pages/Dashboard%20-%20S.png)
 
 4. Register Page
