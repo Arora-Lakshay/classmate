@@ -2,23 +2,31 @@
 
 ## How it Looks
 1. Home Page
-![Uploading Home.png…]()
-2. Client Page
-![Uploading Dashboard - C.png…]()
-3. Admin Page
-![Uploading Dashboard - S.png…]()
+![Home](https://github.com/Lakshayar0ra/classmate/blob/master/pages/Home.png)
+
+2. Student Dashboard Page
+![Dashboard - C](https://github.com/Lakshayar0ra/classmate/blob/master/pages/Dashboard%20-%20C.png)
+
+3. Recruiter Dashboard Page
+![Dashboard - S](https://github.com/Lakshayar0ra/classmate/blob/master/pages/Dashboard%20-%20S.png)
+
 4. Register Page
-![Uploading Register.png…]()
+![Register](https://github.com/Lakshayar0ra/classmate/blob/master/pages/Register.png)
+
 5. Login Page
-![Uploading Login.png…]()
-6. Create New Job Post Page
-![Uploading Create Post.png…]()
+![Login](https://github.com/Lakshayar0ra/classmate/blob/master/pages/Login.png)
+
+6. Create New Job Page
+![Create Post](https://github.com/Lakshayar0ra/classmate/blob/master/pages/Create%20Post.png)
+
 7. Apply for Job Page
-![Uploading Result - Job.png…]()
+![Result - Job](https://github.com/Lakshayar0ra/classmate/blob/master/pages/Job.png)
+
 8. Saved Drafts Page
-![Uploading Result - Drafts.png…]()
+![Result - Drafts](https://github.com/Lakshayar0ra/classmate/blob/master/pages/Result%20-%20Drafts.png)
+
 9. Job Listings Page
-![Uploading Listings.png…]()
+![Listings](https://github.com/Lakshayar0ra/classmate/blob/master/pages/Result%20-%20Job.png)
 
 ## Steps to Run this project on Localhost
 
